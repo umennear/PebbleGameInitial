@@ -3,47 +3,52 @@ import java.io.*;
 
 public class PebbleGame() implements interface{
     public static void GameMain(){
-        Scanner  scan = new Scanner(System.in);
+        Scanner scan=new Scanner(System.in);
 
         System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\n The integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n");
         System.out.println("Please enter the number of players:");
 
-        int noOfPlayersInput = 0;
-        boolean validationSuccessful = false;
+        int noOfPlayersInput=0;
+        boolean validationSuccessful=false;
 
         System.out.print("Please enter the number of players: ");
-        do {
+        do{
         // validate that the input is an integer
-        if (in.hasNextInt() == true) {
-        noOfPayersInput = scan.nextInt();
-        } else {
+        if(in.hasNextInt()==true){
+        noOfPayersInput=scan.nextInt();
+        }else{
         System.out.print("Please enter an integer number of players: ");
         scan.next();
         continue;
         }
 
         // validate that the input is positive
-        if (noOfPlatersInput < 0) {
+        if(noOfPlatersInput< 0){
         System.out.print("Please enter a positive integer: ");
         continue;
-        } else {
-        validationSuccessful = true;
+        }else{
+        validationSuccessful=true;
         }
         }
-        while (validationSuccessful == false)
+        while(validationSuccessful==false)
 
-        boolean fileVarificationSuccessful = false;
+        boolean fileVarification0Successful=false;
+        boolean fileVarificantion1Successful=false;
+        boolean fileVarificantion2Successful=false;
+
         do{
         System.out.println("Please enter locations of bag number 0 to load:");
-        String blackBag1Name = scan.nextLine();
-        if(blackBag1Name.exists() && !blackBag1Name.isDirectory()){
-        fileVarificationSuccessful = true;
+        String blackBag1Name=scan.nextLine();
+        if(blackBag1Name.exists()&&!blackBag1Name.isDirectory()){
+        fileVarificationSuccessful=true;
         }else{
-        System.out.println(blackBag1Name + " Does not exists. Please re-enter the location of the file.");
+        System.out.println(blackBag1Name+" Does not exists. Please re-enter the location of the file.");
         }
-        }while (fileVarificationSuccessful == false)
+        }while(fileVarificationSuccessful==false)
+        do{}
         System.out.println("Please enter locations of bag number 1 to load:");
-        String blackBag2Name = scan.nextLine();
+        String blackBag2Name=scan.nextLine();
+        }while ()
         System.out.println("Please enter locations of bag number 2 to load:");
         String blackBag3Name = scan.nextLine();
         File blackBag1 = new File (blackBag1Name);

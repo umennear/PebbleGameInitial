@@ -11,12 +11,9 @@ public class BagsTest{
 
     @Before
     public void setUp(){
-        String blackBag1Name = "blackBag1.csv";
-        String blackBag2Name = "blackBag2.csv";
-        String blackBag3Name = "blackBag3.csv";
+        String blackBag1Name = "example_file_1.csv";
         File blackBag1 = new File(blackBag1Name);
-        File blackBag2 = new File(blackBag2Name);
-        File blackBag3 = new File(blackBag3Name);
+        Scanner Reader1 = new Scanner(blackBag1);
         int noOfPlayers = 2;
         //create the bags
         //read the files
