@@ -29,11 +29,19 @@ public class PebbleGame() implements interface{
         } else {
         validationSuccessful = true;
         }
-        } while (validationSuccessful == false)
+        }
+        while (validationSuccessful == false)
 
-
+        boolean fileVarificationSuccessful = false;
+        do{
         System.out.println("Please enter locations of bag number 0 to load:");
         String blackBag1Name = scan.nextLine();
+        if(blackBag1Name.exists() && !blackBag1Name.isDirectory()){
+        fileVarificationSuccessful = true;
+        }else{
+        System.out.println(blackBag1Name + " Does not exists. Please re-enter the location of the file.");
+        }
+        }while (fileVarificationSuccessful == false)
         System.out.println("Please enter locations of bag number 1 to load:");
         String blackBag2Name = scan.nextLine();
         System.out.println("Please enter locations of bag number 2 to load:");
