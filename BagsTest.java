@@ -19,7 +19,7 @@ public class BagsTest{
         //create the bags
         //read the files
         String data = Reader1.nextLine();
-        Lis
+        List[String] = data.
         //create a list of pebbles from the files etc
         // Create files that do and do not fail the tests
         // Get contents of file
