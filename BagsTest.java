@@ -27,7 +27,7 @@ public class BagsTest{
     }
     @After
     public void reset(){
-
+        //close any scanners
     }
     @Test
     public void checkWithinRange(List[Int] size){
