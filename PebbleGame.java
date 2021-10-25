@@ -41,31 +41,57 @@ public class PebbleGame(){
         }
         while(validationSuccessful==false)
 
+
         boolean fileVarification0Successful=false;
         boolean fileVarificantion1Successful=false;
         boolean fileVarificantion2Successful=false;
         // tests that the first file is in the given directory and is of the correct format
         do{
-        System.out.println("Please enter locations of bag number 0 to load:");
-        String blackBag1Name=scan.nextLine();
-        if(blackBag1Name.exists()&&!blackBag1Name.isDirectory()){
-        fileVarificationSuccessful=true;
-        }else{
-        System.out.println(blackBag1Name+" Does not exists. Please re-enter the location of the file.");
-        }
-        }while(fileVarificationSuccessful==false)
-        do{}
-        System.out.println("Please enter locations of bag number 1 to load:");
-        String blackBag2Name=scan.nextLine();
-        }while ()
-        System.out.println("Please enter locations of bag number 2 to load:");
-        String blackBag3Name = scan.nextLine();
-        File blackBag1 = new File (blackBag1Name);
-        Scanner Reader1 = new Scanner(blackBag1)
-        File blackBag2 = new File (blackBag2Name);
-        Scanner Reader2 = new Scanner(blackBag2)
-        File blackBag3 = new File (blackBag3Name);
-        Scanner Reader3 = new Scanner(blackBag3)
+            System.out.println("Please enter locations of bag number 0 to load:");
+            String blackBagXName=scan.nextLine();
+            if(blackBagXName.exists()&&!blackBagXName.isDirectory()){
+            fileVarificationSuccessful=true;
+            }else{
+            System.out.println(blackBagXName+" Does not exists. Please re-enter the location of the file.");
+            }
+        }while(fileVarification0Successful==false);
+        // tests that the second file is in the given directory and is of the correct format
+        do{
+            System.out.println("Please enter locations of bag number 1 to load:");
+            String blackBagYName=scan.nextLine();
+            if(blackBagYName.exists()&&!blackBagYName.isDirectory()){
+            fileVarificationSuccessful=true;
+            }else{
+            System.out.println(blackBagYName+" Does not exists. Please re-enter the location of the file.");
+            }
+        } while(fileVarification1Successful==false);
+        // tests that the third file is in the given directory and is of the correct format
+        do {
+            System.out.println("Please enter locations of bag number 2 to load:");
+            String blackBagZName = scan.nextLine();
+            if (blackBagZName.exists() && !blackBagZName.isDirectory()) {
+                fileVarificationSuccessful = true;
+            } else {
+                System.out.println(blackBag2Name + " Does not exists. Please re-enter the location of the file.");
+            }
+        }while(fileVarification2Successful==false);
+        //creates the bags files after they have been checked
+        File blackBagX=new File(blackBagXName);
+        File blackBagY=new File(blackBagYName);
+        File blackBagZ=new File(blackBagZName);
+        //creates the bags themselves as objects with basic attributes
+        Bag blackBagX = new Bag("blackBagX", blackBagXName); // initialising the bags to create the base objects
+        Bag blackBagY = new Bag("blackBagY", blackBagYName);
+        Bag blackBagZ = new Bag("blackBagZ", blackBagZName);
+        Bag whiteBagA = new Bag("whiteBagA", blackBagAName);
+        Bag whiteBagB = new Bag("whiteBagB", blackBagBName);
+        Bag whiteBagC = new Bag("whiteBagC", blackBagCName);
+        // for the black bags, the bags are given the pebbles with the weights
+        createBlackBag(numberOFPlayers, blackBagX, blackBagY, blackBagZ);
+        // end of setup
+    }
+
+
 
 
     }
@@ -89,48 +115,41 @@ public class PebbleGame(){
 
 
 
-
-
-
-
-
-    class Players{
-        //threads and stuff
-
+    protected syncronised boolean winner(ArrayList<Integer> playerPebbles){
+        if (this.winner) {
+            return this.winner;
+        }else {
+            int playerPebbleValue = 0:
+            for (Ingteger sum : playerPebbles){
+                playerPebbleValue += sum;
+            }
+            if (playerPebbleValue == 100){
+                this.winner = true;
+                System.out.println("The game has ended with Pebbles: " + playerPebbles);
+                return true;
+            }else {
+                return false;
+        }
+        }
     }
-    class Bags{
-        private void randomNumGenerator(int min, int max){
-            Random rand;
-            int randomNum = rand.nextInt((max - min) + 1) + min;
-            return randomNum;
+
+
+
+    class Player {
+        private String name;
+
+        public void createPlayers(int noOfPlayers) {
+            for (int j = 0; j < this.noOfPlayers; j++) {
+                Runnable runnable = new Player("Player" + j.toString());
+                Thread thread = new Thread(runnable);
+                thread.setName("Player" + j.toString());
+                thread.start();
+            }
+
         }
-        private void createBlackBags(int numberOfPlayers, File bag1, File bag2, File bag3){
-            int numberOfPebbles = numberOfPlayers*11;
-            for(int i = 0; i < numberOfPebbles; i++ ){
-                bag1.add(randomNumGenerator(0, 25));
-                bag2.add(randomNumGenerator(0, 25));
-                bag3.add(randomNumGenerator(0, 25));
-            }
-        }
-        private File createWhiteBags(){
-            try {
-                File file = new File("whiteBag1.csv");
-                file.createFile()
-            } catch(Exception e) {
-                e.printStackTrace();
-            }
-            try {
-                File file = new File("whiteBag2.csv");
-                file.createFile();
-            } catch(Exception e) {
-                e.printStackTrace();
-            }
-            try {
-                File file = new File("whiteBag3.csv");
-                file.createFile()
-            } catch(Exception e) {
-                e.printStackTrace();
-            }
+
+        public Player(String playerName) {
+            this.name = playerName;
 
         }
         public String getName(){
@@ -140,7 +159,7 @@ public class PebbleGame(){
         public static void main(String args[]){
 
         }
-    }
+
 
 
 
