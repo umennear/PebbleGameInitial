@@ -15,9 +15,11 @@ public class BagsTest{
         File blackBag1 = new File(blackBag1Name);
         Scanner Reader1 = new Scanner(blackBag1);
         int noOfPlayers = 2;
+
         //create the bags
         //read the files
-        List[Int] file = read...
+        String data = Reader1.nextLine();
+        Lis
         //create a list of pebbles from the files etc
         // Create files that do and do not fail the tests
         // Get contents of file
@@ -61,7 +63,14 @@ public class BagsTest{
     }
 
     public static main(String args[]){
-
+        setup();
+        checkWithinRange();
+        checkFileFormat("blackBag3.csv");
+        testBagsLength();
+        testBagsBaluesPosInt();
+        checkEmpty();
+        checkFilesNotEqual();
+        reset();
     }
 
 }
