@@ -4,6 +4,7 @@
 //import
 import static org.junit.Assert.*;
 import java.unitl.*;
+import org.junit.*;
 import java.io.*;
 
 public class BagsTest{
@@ -18,8 +19,14 @@ public class BagsTest{
 
         //create the bags
         //read the files
-        String data = Reader1.nextLine();
-        List[String] = data.
+        public String data = Reader1.nextLine();
+        public List<String> dataList = data.split(",");
+        public List<int> fileList;
+        for (int i = 0; i > dataList.size(); i++) {
+            fileList.add(dataList[i].toint());
+        }
+
+
         //create a list of pebbles from the files etc
         // Create files that do and do not fail the tests
         // Get contents of file
@@ -45,7 +52,7 @@ public class BagsTest{
         assert(file.size() == noOfPlayers * 11)
     }
     @Test
-    public void testBagsValuesPosInt(List[Int] file){
+    public void testBagsValuesPosInt(List<int> file) {
         //read each value from list, check its greater than 0 and an integer
         for (int i = 0; i < file.size() ; i++;){
             assert(i>0); // test for being positive

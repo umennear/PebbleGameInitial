@@ -1,13 +1,23 @@
 import java.util.*;
 import java.io.*;
 
-public class PebbleGame() implements interface{
-    public static void GameMain(){
+public class PebbleGame(){
+
+    private void createBlackBags(int numberOfPlayers, Bags Blackbag1, BlackBags bag2, BlackBags bag3){ // method to give the black bags values at beginning of the game
+        int numberOfPebbles = numberOfPlayers*11; // as in spec
+        for(int i = 0; i < numberOfPebbles; i++ ){ // gives each bag a pebble for numberOfPebble times with a random int value
+            bag1.addPebble(randomNumGenerator(0, 25));
+            bag2.addPebble(randomNumGenerator(0, 25));
+            bag3.addPebble(randomNumGenerator(0, 25));
+        }
+    }
+
+    public static void GameMain(){ // this goes through the actions of the game
+
+        // starts by setting up the game
         Scanner scan=new Scanner(System.in);
 
-        System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\n The integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n");
-        System.out.println("Please enter the number of players:");
-
+        System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\n The integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n"); // opening remarks
         int noOfPlayersInput=0;
         boolean validationSuccessful=false;
 
@@ -21,7 +31,6 @@ public class PebbleGame() implements interface{
         scan.next();
         continue;
         }
-
         // validate that the input is positive
         if(noOfPlatersInput< 0){
         System.out.print("Please enter a positive integer: ");
@@ -35,7 +44,7 @@ public class PebbleGame() implements interface{
         boolean fileVarification0Successful=false;
         boolean fileVarificantion1Successful=false;
         boolean fileVarificantion2Successful=false;
-
+        // tests that the first file is in the given directory and is of the correct format
         do{
         System.out.println("Please enter locations of bag number 0 to load:");
         String blackBag1Name=scan.nextLine();
@@ -60,6 +69,7 @@ public class PebbleGame() implements interface{
 
 
     }
+
     public void readFile(File fileName,Scanner reader ){
 
         while(myReader.hasNextLine()){
@@ -67,6 +77,7 @@ public class PebbleGame() implements interface{
             return data;
         }
     }
+
     public void getNextPebble(String data){
         List[String] dataList = data.split(",");
         Random rand;
@@ -75,6 +86,8 @@ public class PebbleGame() implements interface{
 
 
     }
+
+
 
 
 
@@ -120,7 +133,10 @@ public class PebbleGame() implements interface{
             }
 
         }
+        public String getName(){
+           return this.name;
 
+        }
         public static void main(String args[]){
 
         }
