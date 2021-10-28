@@ -2,14 +2,19 @@ import java.util.*;
 import java.io.*;
 
 public class PebbleGame {
-
-    private void createBlackBags(int numberOfPlayers, Bags Blackbag1, BlackBags bag2, BlackBags bag3) { // method to give the black bags values at beginning of the game
+    private static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) { // method to give the black bags values at beginning of the game
         int numberOfPebbles = numberOfPlayers * 11; // as in spec
         for (int i = 0; i < numberOfPebbles; i++) { // gives each bag a pebble for numberOfPebble times with a random int value
             bag1.addPebble(randomNumGenerator(0, 25));
             bag2.addPebble(randomNumGenerator(0, 25));
             bag3.addPebble(randomNumGenerator(0, 25));
         }
+    }
+
+    private static int randomNumGenerator(int min, int max){
+        Random rand = new Random();
+        int randomNum = rand.nextInt((max - min) + 1) + min;
+        return randomNum;
     }
 
     public static void gameMain() { // this goes through the actions of the game
@@ -23,16 +28,16 @@ public class PebbleGame {
 
         System.out.print("Please enter the number of players: ");
         do {
+            String numberOfPlayersString = scan.nextLine();
             // validate that the input is an integer
-            if (in.hasNextInt() == true) {
-                noOfPayersInput = scan.nextInt();
-            } else {
-                System.out.print("Please enter an integer number of players: ");
-                scan.next();
-                continue;
+            try {
+                noOfPlayersInput = Integer.parseInt(numberOfPlayersString); //Converts String to Int
+            } catch (NumberFormatException e) { //If String is unable to be converted to an Int
+                System.out.println("Please enter an integer number of players:");
             }
+
             // validate that the input is positive
-            if (noOfPlatersInput < 0) {
+            if (noOfPlayersInput < 0) {
                 System.out.print("Please enter a positive integer: ");
                 continue;
             } else {
@@ -47,33 +52,36 @@ public class PebbleGame {
         // tests that the first file is in the given directory and is of the correct format
         do {
             System.out.println("Please enter locations of bag number 0 to load:");
-            String blackBagXName = scan.nextLine();
-            if (blackBagXName.exists() && !blackBagXName.isDirectory()) {
-                fileVarificationSuccessful = true;
+            blackBagXName = scan.nextLine();
+            blackBagXFile = new File(blackBagXName);
+            if (blackBagXFile.exists() && !blackBagXFile.isDirectory()) {
+                fileVarification0Successful = true;
             } else {
-                System.out.println(blackBagXName + " Does not exists. Please re-enter the location of the file.");
+                System.out.println(blackBagXName + " does not exists. Please re-enter the location of the file.");
             }
         } while (fileVarification0Successful == false);
         // tests that the second file is in the given directory and is of the correct format
         do {
             System.out.println("Please enter locations of bag number 1 to load:");
-            String blackBagYName = scan.nextLine();
-            if (blackBagYName.exists() && !blackBagYName.isDirectory()) {
-                fileVarificationSuccessful = true;
+             blackBagYName = scan.nextLine();
+            blackBagYFile = new File(blackBagYName);
+            if (blackBagYFile.exists() && !blackBagYFile.isDirectory()) {
+                fileVarificantion1Successful = true;
             } else {
-                System.out.println(blackBagYName + " Does not exists. Please re-enter the location of the file.");
+                System.out.println(blackBagYName + " does not exists. Please re-enter the location of the file.");
             }
-        } while (fileVarification1Successful == false);
+        } while (fileVarificantion1Successful == false);
         // tests that the third file is in the given directory and is of the correct format
         do {
             System.out.println("Please enter locations of bag number 2 to load:");
-            String blackBagZName = scan.nextLine();
-            if (blackBagZName.exists() && !blackBagZName.isDirectory()) {
-                fileVarificationSuccessful = true;
+             blackBagZName = scan.nextLine();
+             blackBagZFile = new File(blackBagZName);
+            if (blackBagZFile.exists() && !blackBagZFile.isDirectory()) {
+                fileVarificantion2Successful = true;
             } else {
                 System.out.println(blackBag2Name + " Does not exists. Please re-enter the location of the file.");
             }
-        } while (fileVarification2Successful == false);
+        } while (fileVarificantion2Successful == false);
         //creates the bags files after they have been checked
         File blackBagX = new File(blackBagXName);
         File blackBagY = new File(blackBagYName);
@@ -86,7 +94,7 @@ public class PebbleGame {
         Bag whiteBagB = new Bag("whiteBagB", blackBagBName);
         Bag whiteBagC = new Bag("whiteBagC", blackBagCName);
         // for the black bags, the bags are given the pebbles with the weights
-        createBlackBag(numberOFPlayers, blackBagX, blackBagY, blackBagZ);
+        createBlackBags(noOfPlayersInput, blackBagX, blackBagY, blackBagX);
         // end of setup
 
 
@@ -111,7 +119,9 @@ public class PebbleGame {
     }
 
 
-    protected synchronized boolean winner(ArrayList<Integer> playerPebbles) {
+    protected boolean winner = false;
+
+    protected synchronized boolean win(ArrayList<Integer> playerPebbles) {
         if (this.winner) {
             return this.winner;
         } else {
@@ -129,9 +139,22 @@ public class PebbleGame {
         }
     }
 
+    /**
+    public void createPlayers(int noOfPlayers) {
+        for (Integer j = 0; j < noOfPlayers; j++) {
+            Runnable runnable = new Player("Player" + Integer.toString(j));
+            Thread thread = new Thread(runnable);
+            thread.setName("Player" + Integer.toString(j));
+            thread.start();
+        }
+
+    }
+     */
+
 
     class Player {
         private String name;
+
 
         public void createPlayers(int noOfPlayers) {
             for (int j = 0; j < this.noOfPlayers; j++) {

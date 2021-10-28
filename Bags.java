@@ -1,12 +1,13 @@
 import java.util.Random;
-import java.IOException;
+import java.util.*;
+import java.io.*;
 
 public class Bags{
     private String name;
     public List<Integer> bagPebbles = Collections.synchronizedList(new ArrayList<Integer>());
     private File fileName;
 
-    public Bags(String name, File fileName, File){ //white bag
+    public Bags(String name, File fileName){ //white bag
         this.name = name;
         this.fileName = fileName;
     }
@@ -16,12 +17,12 @@ public class Bags{
 //
 //    }
 
-    public static void addPebble(Integer weight){
-        this.bagPebbles.add(weight);
+    public void addPebble(Integer weight){
+        bagPebbles.add(weight);
     }
 
-    public static boolean isEmpty(){
-        if(this.list.size() == 0){
+    public boolean isEmpty(){
+        if(bagPebbles.size() == 0){
             return true;
         }
         return false;
@@ -31,8 +32,8 @@ public class Bags{
     }
 
 
-    private void randomNumGenerator(int min, int max){
-        Random rand;
+    private int randomNumGenerator(int min, int max){
+        Random rand = new Random();
         int randomNum = rand.nextInt((max - min) + 1) + min;
         return randomNum;
     }
