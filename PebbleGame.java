@@ -22,24 +22,23 @@ public class PebbleGame {
         boolean validationSuccessful = false;
 
         System.out.print("Please enter the number of players: ");
-        do{
-        // validate that the input is an integer
-        if(in.hasNextInt()==true){
-        noOfPayersInput=scan.nextInt();
-        }else{
-        System.out.print("Please enter an integer number of players: ");
-        scan.next();
-        continue;
-        }
-        // validate that the input is positive
-        if(noOfPlatersInput< 0){
-        System.out.print("Please enter a positive integer: ");
-        continue;
-        }else{
-        validationSuccessful=true;
-        }
-        }
-        while(validationSuccessful==false)
+        do {
+            // validate that the input is an integer
+            if (in.hasNextInt() == true) {
+                noOfPayersInput = scan.nextInt();
+            } else {
+                System.out.print("Please enter an integer number of players: ");
+                scan.next();
+                continue;
+            }
+            // validate that the input is positive
+            if (noOfPlatersInput < 0) {
+                System.out.print("Please enter a positive integer: ");
+                continue;
+            } else {
+                validationSuccessful = true;
+            }
+        } while (validationSuccessful == false);
 
 
         boolean fileVarification0Successful = false;
@@ -89,6 +88,8 @@ public class PebbleGame {
         // for the black bags, the bags are given the pebbles with the weights
         createBlackBag(numberOFPlayers, blackBagX, blackBagY, blackBagZ);
         // end of setup
+
+
     }
 
 
