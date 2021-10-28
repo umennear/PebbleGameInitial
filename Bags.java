@@ -28,7 +28,7 @@ public class Bags{
         return false;
     }
     public void updateFile(String data){
-        // some writer fucntion here
+        // some writer function here
     }
 
 

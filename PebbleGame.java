@@ -22,7 +22,7 @@ public class PebbleGame {
         // starts by setting up the game
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\n The integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n"); // opening remarks
+        System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\nThe integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n"); // opening remarks
         int noOfPlayersInput = 0;
         boolean validationSuccessful = false;
 
@@ -49,6 +49,12 @@ public class PebbleGame {
         boolean fileVarification0Successful = false;
         boolean fileVarificantion1Successful = false;
         boolean fileVarificantion2Successful = false;
+        String blackBagXName;
+        String blackBagYName;
+        String blackBagZName;
+        File blackBagXFile = null;
+        File blackBagYFile = null;
+        File blackBagZFile = null;
         // tests that the first file is in the given directory and is of the correct format
         do {
             System.out.println("Please enter locations of bag number 0 to load:");
@@ -79,20 +85,21 @@ public class PebbleGame {
             if (blackBagZFile.exists() && !blackBagZFile.isDirectory()) {
                 fileVarificantion2Successful = true;
             } else {
-                System.out.println(blackBag2Name + " Does not exists. Please re-enter the location of the file.");
+                System.out.println(blackBagZName + " does not exists. Please re-enter the location of the file.");
             }
         } while (fileVarificantion2Successful == false);
         //creates the bags files after they have been checked
-        File blackBagX = new File(blackBagXName);
-        File blackBagY = new File(blackBagYName);
-        File blackBagZ = new File(blackBagZName);
+        // add in try catch for createFile();
+        File whiteBagAFile = new File("WhiteBagA.csv");
+        File whiteBagBFile = new File("WhiteBagA.csv");
+        File whiteBagCFile = new File("WhiteBagA.csv");
         //creates the bags themselves as objects with basic attributes
-        Bag blackBagX = new Bag("blackBagX", blackBagXName); // initialising the bags to create the base objects
-        Bag blackBagY = new Bag("blackBagY", blackBagYName);
-        Bag blackBagZ = new Bag("blackBagZ", blackBagZName);
-        Bag whiteBagA = new Bag("whiteBagA", blackBagAName);
-        Bag whiteBagB = new Bag("whiteBagB", blackBagBName);
-        Bag whiteBagC = new Bag("whiteBagC", blackBagCName);
+        Bags blackBagX = new Bags("blackBagX", blackBagXFile); // initialising the bags to create the base objects
+        Bags blackBagY = new Bags("blackBagY", blackBagYFile);
+        Bags blackBagZ = new Bags("blackBagZ", blackBagZFile);
+        Bags whiteBagA = new Bags("whiteBagA", whiteBagAFile);
+        Bags whiteBagB = new Bags("whiteBagB", whiteBagBFile);
+        Bags whiteBagC = new Bags("whiteBagC", whiteBagCFile);
         // for the black bags, the bags are given the pebbles with the weights
         createBlackBags(noOfPlayersInput, blackBagX, blackBagY, blackBagX);
         // end of setup
@@ -101,18 +108,19 @@ public class PebbleGame {
     }
 
 
-    public void readFile(File fileName, Scanner reader) {
+    public static String readFile(File fileName, Scanner reader) {
 
-        while (myReader.hasNextLine()) {
+        while (reader.hasNextLine()) {
             String data = reader.nextLine();
             return data;
         }
+        return null;
     }
 
-    public void getNextPebble(String data) {
-        List<String> dataList = data.split(",");
-        Random rand;
-        int randomNum = rand.nextInt(0, dataList.size());
+    public static String getNextPebble(String data) {
+        String[] dataList = data.split(",");
+        Random rand = new Random();
+        int randomNum = rand.nextInt((dataList.length)+1);
         return dataList[randomNum];
 
 
@@ -126,7 +134,7 @@ public class PebbleGame {
             return this.winner;
         } else {
             int playerPebbleValue = 0;
-            for (Ingteger sum : playerPebbles) {
+            for (Integer sum : playerPebbles) {
                 playerPebbleValue += sum;
             }
             if (playerPebbleValue == 100) {
@@ -156,15 +164,6 @@ public class PebbleGame {
         private String name;
 
 
-        public void createPlayers(int noOfPlayers) {
-            for (int j = 0; j < this.noOfPlayers; j++) {
-                Runnable runnable = new Player("Player" + j.toString());
-                Thread thread = new Thread(runnable);
-                thread.setName("Player" + j.toString());
-                thread.start();
-            }
-
-        }
 
         public Player(String playerName) {
             this.name = playerName;
