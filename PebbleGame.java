@@ -23,8 +23,8 @@ public class PebbleGame {
         do {
             System.out.println("Please enter locations of bag number 0 to load:");
             String blackBagXName = scan.nextLine();
-            blackBagXFile = new File(blackBagXName);
-            if (blackBagXFile.exists() && !blackBagXFile.isDirectory()) {
+            blackBagFile = new File(blackBagXName);
+            if (blackBagFile.exists() && !blackBagFile.isDirectory()) {
                 fileVarificationSuccessful = true;
             } else {
                 System.out.println(blackBagXName + " does not exists. Please re-enter the location of the file.");
@@ -32,10 +32,11 @@ public class PebbleGame {
         } while (fileVarificationSuccessful == false);
         return blackBagFile;
     }
-    public static int checkIntInput(Scanner scan, ){
+
+    public static int checkIntInput(Scanner scan ){
 
         boolean validationSuccessful = false;
-        int noOfPlayersInput;
+        int noOfPlayersInput = 0;
 
         System.out.print("Please enter the number of players: ");
         do {
@@ -43,16 +44,16 @@ public class PebbleGame {
             // validate that the input is an integer
             try {
                 noOfPlayersInput = Integer.parseInt(numberOfPlayersString); //Converts String to Int
+                // validate that the input is positive
+                if (noOfPlayersInput < 0) {
+                    System.out.print("Please enter a positive integer: ");
+                    continue;
+                } else {
+                    validationSuccessful = true;
+                }
             } catch (NumberFormatException e) { //If String is unable to be converted to an Int
                 System.out.println("Please enter an integer number of players:");
-            }
 
-            // validate that the input is positive
-            if (noOfPlayersInput < 0) {
-                System.out.print("Please enter a positive integer: ");
-                continue;
-            } else {
-                validationSuccessful = true;
             }
         } while (validationSuccessful == false);
 
@@ -87,29 +88,32 @@ public class PebbleGame {
     }
 
 
-    public static String readFile(File fileName) {
-        Scanner reader = new Scanner(fileName);
-        while (reader.hasNextLine()) {
-            String data = reader.nextLine();
+    public static String readFile(File fileName) throws FileNotFoundException {
+        try{
+            Scanner reader = new Scanner(fileName);
+            while (reader.hasNextLine()) {
+                String data = reader.nextLine();
+                reader.close();
+                return data;
+            }
             reader.close();
-            return data;
-        }
-        reader.close();
+        } catch(FileNotFoundException e){
+            System.out.println("File cannot be found please enter a valid file");}
+
         return null;
     }
 
-    public static String getNextPebble(String data) { // takes a string (line from a file) and picks an element of that csv List
+    public static String getNextPebble(String data) {
+            // takes a string (line from a file) and picks an element of that csv List
         String[] dataList = data.split(",");
         Random rand = new Random();
         int randomNum = rand.nextInt((dataList.length)+1);
         return dataList[randomNum];
-
-
     }
 
     public static void playerWon(String PlayerName){
         //end the threads
-        System.out.println("Congratulations to " + PlayerName + ", you have won the game.\nThe game is now over, Goodbye")
+        System.out.println("Congratulations to " + PlayerName + ", you have won the game.\nThe game is now over, Goodbye");
     }
 
 
@@ -169,8 +173,9 @@ public class PebbleGame {
         public int[] getCurrentHand(){
             return this.currentHand;
         }
+
         public int getHandSum(){
-            int HandSum;
+            int HandSum = 0;
             for(int i = 0; i < this.currentHand.length; i++){
                 HandSum = HandSum + i;
             }
