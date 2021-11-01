@@ -6,6 +6,10 @@ import static org.junit.Assert.*;
 import java.unitl.*;
 import org.junit.*;
 import java.io.*;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 @RunWith(TestRunner.java)
 public class BagsTest {
