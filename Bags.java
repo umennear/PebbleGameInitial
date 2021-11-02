@@ -11,6 +11,7 @@ public class Bags{
         this.name = name;
         this.fileName = fileName;
     }
+    //we need to axtually add the pebbles to the bag array or no other methods will work 
 //    public Bag(String name, String fileName, List<Integer> data) {
 //        this.name = name;
 //        this.fileName = fileName;
