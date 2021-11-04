@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Adding flowchart to report">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Validation and testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ECM2414_Report.pages" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame$Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$M2414_Report.docx" beforeDir="false" />
     </list>
-    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="">
-      <change beforePath="$PROJECT_DIR$/BagsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BagsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGameTest.java" afterDir="false" />
-    </list>
+    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +16,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1zzcJhP7bQZyjksq4UJYX4SIqCN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -70,7 +69,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635764075887</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Validation and testing">
+      <created>1635768047168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635768047168</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changes by katiehopkins">
+      <created>1635768060167</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635768060167</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,7 +101,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="28/10/2021 15:55" />
     <MESSAGE value="Adding flowchart to report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding flowchart to report" />
+    <MESSAGE value="Validation and testing" />
+    <MESSAGE value="Changes by katiehopkins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by katiehopkins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
