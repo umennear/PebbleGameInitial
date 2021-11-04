@@ -26,8 +26,18 @@ public class Bags {
         }
         return false;
     }
-    public void updateFile(String data){
+
+    public void updateFileAdd(String data) {
         // some writer function here
+        BufferedWriter writer = new BufferedWriter(new FileWriter(this.FileName));
+        writer.write(data);
+        writer.close();
+    }
+
+    public void updateFileRemove(List<Integer> list) {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(this.FileName));
+        writer.write(list.toString().replaceAll("[\\[\\]]", ""));
+        writer.close();
     }
 
     public List<Integer> getBagPebbles() {
