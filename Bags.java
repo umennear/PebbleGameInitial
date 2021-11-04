@@ -29,7 +29,7 @@ public class Bags {
 
     public void updateFileAdd(String data) {
         // some writer function here
-        BufferedWriter writer = new BufferedWriter(new FileWriter(this.FileName));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
         writer.write(data);
         writer.close();
     }

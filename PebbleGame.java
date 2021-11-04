@@ -7,6 +7,7 @@ import java.io.*;
 public class PebbleGame {
     /**
      * Adds pebbles which fit our given parameters to black bag files
+     *
      * @param numberOfPlayers
      * @param bag1
      * @param bag2
@@ -23,11 +24,12 @@ public class PebbleGame {
 
     /**
      * Random number generator which generates integer numbers in a given range
+     *
      * @param min
      * @param max
      * @return random number
      */
-    private static int randomNumGenerator(int min, int max){
+    private static int randomNumGenerator(int min, int max) {
         Random rand = new Random();
         int randomNum = rand.nextInt((max - min) + 1) + min;
         return randomNum;
@@ -39,16 +41,15 @@ public class PebbleGame {
      * @param scan the scan
      * @return the file
      */
-    public static File checkFileInput(Scanner scan){
+    public static File checkFileInput(Scanner scan) {
         boolean fileVarificationSuccessful = false;
         File blackBagFile = null;
 
         do {
             System.out.println("Please enter locations of bag number 0 to load:");
             String blackBagName = scan.nextLine();
-            if(blackBagName.equals("E")){
+            if (blackBagName.equals("E")) {
                 System.exit(0);
-
             }
             blackBagFile = new File(blackBagName);
             if (blackBagFile.exists() && !blackBagFile.isDirectory()) {
@@ -66,7 +67,7 @@ public class PebbleGame {
      * @param scan the scan
      * @return the int
      */
-    public static int checkIntInput(Scanner scan ){
+    public static int checkIntInput(Scanner scan) {
 
         boolean validationSuccessful = false;
         int noOfPlayersInput = 0;
@@ -75,11 +76,10 @@ public class PebbleGame {
         do {
             String numberOfPlayersString = scan.nextLine();
             // validate that the input is an integer
-            if(numberOfPlayersString.equals("E")){
+            if (numberOfPlayersString.equals("E")) {
                 System.exit(0);
                 continue;
-            }
-            else{
+            } else {
                 try {
                     noOfPlayersInput = Integer.parseInt(numberOfPlayersString); //Converts String to Int
                     // validate that the input is positive
@@ -102,8 +102,8 @@ public class PebbleGame {
     /**
      * Game main.
      */
-    public static void gameMain() { // this goes through the actions of the game
-
+    public static void gameMain() {
+        // this goes through the actions of the game
         // starts by setting up the game
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\nThe integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n"); // opening remarks
@@ -138,16 +138,17 @@ public class PebbleGame {
      * @throws FileNotFoundException the file not found exception
      */
     public static String readFile(File fileName) throws FileNotFoundException {
-        try{
-            Scanner = new Scanner(fileName);
+        try {
+            Scanner reader = new Scanner(fileName);
             while (reader.hasNextLine()) {
                 String data = reader.nextLine();
                 reader.close();
                 return data;
             }
             reader.close();
-        } catch(FileNotFoundException e){
-            System.out.println("File cannot be found please enter a valid file");}
+        } catch (FileNotFoundException e) {
+            System.out.println("File cannot be found please enter a valid file");
+        }
 
         return null;
     }
@@ -159,10 +160,10 @@ public class PebbleGame {
      * @return the next pebble
      */
     public static String getNextPebble(String data) {
-            // takes a string (line from a file) and picks an element of that csv List
+        // takes a string (line from a file) and picks an element of that csv List
         String[] dataList = data.split(",");
         Random rand = new Random();
-        int randomNum = rand.nextInt((dataList.length)+1);
+        int randomNum = rand.nextInt((dataList.length) + 1);
         return dataList[randomNum];
     }
 
@@ -171,7 +172,7 @@ public class PebbleGame {
      *
      * @param PlayerName the player name
      */
-    public static void playerWon(String PlayerName){
+    public static void playerWon(String PlayerName) {
         //end the threads
         System.out.println("Congratulations to " + PlayerName + ", you have won the game.\nThe game is now over, Goodbye");
     }
@@ -208,40 +209,16 @@ public class PebbleGame {
     }
 
 
-    public static void pickPebble() {
-        // use getPebble method
-        // threads?
-    }
-
-    /**
-     * Discard pebble.
-     */
-    public static void discardPebble(){
-
-    }
-
     /**
      * The type Player.
      */
-    class Player extends Thread implements ActionListener {
+    class Player extends Thread implements ActionListenerscle {
         //TODO threads should be created before initial pebbles are given to players
         //TODO make the action listener work
-        private String name;
-        private List<Integer> currentHand = Collections.synchronizedList(new ArrayList<Integer>());
-        private String lastPickUp;
-        private File fileName;
-        Scanner scan = new Scanner(System.in);
-        scan.addActionListener(new ActionListener(){
-            public void actionPeformed(ActionEvent e){
-                String input = scan.nextLine();
-                if(input.equals("E")) {
-                    System.exit(0);
-                }else{
-                    continue;
-                }
-            }
-        });
-
+        public String name;
+        public List<Integer> currentHand = Collections.synchronizedList(new ArrayList<Integer>());
+        public String lastPickUp;
+        public File fileName;
 
         /**
          * Instantiates a new Player.
@@ -255,7 +232,6 @@ public class PebbleGame {
         }
 
         /**
-         *
          * @param e
          */
         public void ActionPeformed(ActionEvent e){
@@ -272,10 +248,9 @@ public class PebbleGame {
             //TODO then repeat until someone has won
             turn();
             //TODO check if winner
-            try{
-               wait();
-            }
-            catch (Exception e){
+            try {
+                wait();
+            } catch (Exception e) {
 
             }
             //TODO need to notify next player that they can now start their turn
@@ -283,54 +258,12 @@ public class PebbleGame {
 
         }
 
-        public void turn(){ // TODO maybe needs to be syncronised
-
-            Random rand = new Random();
-            int pebbleNumber = rand.nextInt(10);
-            int pebbleWeight = this.currentHand.remove(pebbleNumber);
-            //need to add it to a specific white bag
-            if (lastPickUp == null){
-                int bag = randomNumGenerator(0,3);
-                if(bag.equals(1)){
-                    whiteBagA.add(pebbleWeight);
-                    //TODO: write it to file, and to player file
-                    List<Integer> pebbles = blackBagX.getBagPebbles();
-                    Bags bag = blackBagX;
-                    lastPickUp = "BlackBagX";
-                }else if(bag.equals(2)){
-                    List<Integer> pebbles = blackBagY.getBagPebbles();
-                    Bags bag = blackBagY;
-                    //TODO: access black bag Y and picks a random pebble to add to bag
-                    lastPickUp = "BlackBagY";
-                }else if(bag.equals(3)){
-                    List<Integer> pebbles = blackBagZ.getBagPebbles();
-                    Bags bag = blackBagY;
-                    //TODO: access black bag Z and picks a random pebble to add to bag
-                    lastPickUp = "BlackBagY"
-                }
-                int pebblesize = pebbles.size();
-                //need to pick a new bag if the bag is empty
-                int pebbleIndex = randomNumGenerator(0,pebblesize-1);
-                int pick = pebbles.get(pebbleIndex);
-                blackBag.removePebble(pebbleIndex);
-                // blackBag.updateFile(pebbles);
-
-
-            }
-            else if (lastPickUp == "BlackBagX") {
-                //TODO add pebbleWeight to WhiteBagA
-            }
-            else if (lastPickUp == "BlackBagY") {
-                //TODO add pebbleWeight to WhiteBagB
-            }
-            else if (lastPickUp == "BlackBagZ") {
-                //TODO add pebbleWeight to WhiteBagC
-            }
-            int newBag = rand.nextInt(3);
-            int newPick = rand.nextInt(10);
-            //TODO get pebble weight and add to players bag
-
-
+        synchronized public void turn() {
+            discard();
+            checkBags();
+            pickUp();
+            // blackBag.updateFile(pebbles);
+            //TODO: write to file for player and black bag
         }
 
         /**
@@ -338,36 +271,105 @@ public class PebbleGame {
          *
          * @return the name
          */
-        public String getPlayersName() {
-            return this.name;
 
+        synchronized public void discard() {
+            Random rand = new Random();
+            int pebbleNumber = rand.nextInt(10);
+            int pebbleWeight = this.currentHand.remove(pebbleNumber);
+            List<Integer> pebbles;
+            Bags bag;
+            Bags whiteBag;
+            if (lastPickUp == null) {
+                int bag = randomNumGenerator(0, 3);
+                if (bag == 1) {
+                    whiteBag = whiteBagA;
+                } else if (bag == 2) {
+                    whiteBag = whiteBagB;
+                } else if (bag == 3) {
+                    whiteBag = whiteBagC;
+                }
+            } else if (lastPickUp == "X") {
+                whiteBag = whiteBagA;
+            } else if (lastPickUp == "Y") {
+                whiteBag = whiteBagB;
+            } else if (lastPickUp == "Z") {
+                whiteBag = whiteBagC;
+            }
+            whiteBag.add(pebbleWeight);
+            whiteBag.updateFileAdd(pebbleWeight);
+            this.currentHand.add(pebbleWeight);
+            //TODO: Output file writer
+            updateFileAdd(pebbleWeight);
 
         }
 
+        synchronized public void pickUp() {
+            Bags bag;
+            int newBag = randomNumGenerator(0,3);
+
+            if (newBag == 1) {
+                bag = blackBagX;
+                this.lastPickUp = "X";
+            } else if (newBag == 2) {
+                bag = blackBagY;
+                this.lastPickUp = "Y";
+            } else if (newBag == 3) {
+                bag = blackBagZ;
+                this.lastPickUp = "Z";
+            }
+            List<Integer> pebbles = bag.getBagPebbles();
+            int pebblesize = pebbles.size();
+            int pebbleIndex = randomNumGenerator(0, pebblesize - 1);
+            int pick = pebbles.get(pebbleIndex);
+            bag.removePebble(pebbleIndex);
+            //TODO: write to player file and black bag
+        }
+
+
         /**
-         *
-         * @return
-         */
-        public List<Integer> getCurrentHand(){
+        * @return
+        */
+        public String getPlayersName() {
+            return this.name;
+        }
+
+        /**
+        * @return
+        */
+        public List<Integer> getCurrentHand() {
             return this.currentHand;
         }
 
         /**
-         * Get hand sum int.
-         *
-         * @return the int
-         */
-        public int getHandSum(){
+        * Get hand sum int.
+        *
+        * @return the int
+        */
+        public int getHandSum() {
             int HandSum = 0;
-            for(int i = 0; i < this.currentHand.size(); i++){
+            for (int i = 0; i < this.currentHand.size(); i++) {
                 HandSum = HandSum + i;
             }
             return HandSum;
         }
 
+        public void updateFileAdd(String data) {
+            // some writer function here
+            BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
+            writer.add(this.name + " has drawn a " + data + "from bag" + this.lastPickUp);
+            writer.write("\n" + this.name + " hand is " + (currentHand.toString().replaceAll("[\\[\\]]", "")));
+            writer.close();
+        }
 
+        public void updateFileRemove(List<Integer> list, String data, String bag) {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
+            writer.write(this.name + "has discarded a " + data + " to bag " +  bag);
+            writer.write(list.toString().replaceAll("[\\[\\]]", ""));
+            writer.close();
+        }
 
     }
+
 
     /**
      * Main.
