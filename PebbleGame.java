@@ -1,7 +1,17 @@
 import java.util.*;
 import java.io.*;
 
+/**
+ * The type Pebble game.
+ */
 public class PebbleGame {
+    /**
+     * Adds pebbles which fit our given parameters to black bag files
+     * @param numberOfPlayers
+     * @param bag1
+     * @param bag2
+     * @param bag3
+     */
     private static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) { // method to give the black bags values at beginning of the game
         int numberOfPebbles = numberOfPlayers * 11; // as in spec
         for (int i = 0; i < numberOfPebbles; i++) { // gives each bag a pebble for numberOfPebble times with a random int value
@@ -11,12 +21,24 @@ public class PebbleGame {
         }
     }
 
+    /**
+     * Random number generator which generates integer numbers in a given range
+     * @param min
+     * @param max
+     * @return random number
+     */
     private static int randomNumGenerator(int min, int max){
         Random rand = new Random();
         int randomNum = rand.nextInt((max - min) + 1) + min;
         return randomNum;
     }
 
+    /**
+     * Check file input file.
+     *
+     * @param scan the scan
+     * @return the file
+     */
     public static File checkFileInput(Scanner scan){
         boolean fileVarificationSuccessful = false;
         File blackBagFile = null;
@@ -27,12 +49,18 @@ public class PebbleGame {
             if (blackBagFile.exists() && !blackBagFile.isDirectory()) {
                 fileVarificationSuccessful = true;
             } else {
-                System.out.println(blackBagXName + " does not exists. Please re-enter the location of the file.");
+                System.out.println(blackBagName + " does not exists. Please re-enter the location of the file.");
             }
         } while (fileVarificationSuccessful == false);
         return blackBagFile;
     }
 
+    /**
+     * Check int input int.
+     *
+     * @param scan the scan
+     * @return the int
+     */
     public static int checkIntInput(Scanner scan ){
 
         boolean validationSuccessful = false;
@@ -42,24 +70,33 @@ public class PebbleGame {
         do {
             String numberOfPlayersString = scan.nextLine();
             // validate that the input is an integer
-            try {
-                noOfPlayersInput = Integer.parseInt(numberOfPlayersString); //Converts String to Int
-                // validate that the input is positive
-                if (noOfPlayersInput < 0) {
-                    System.out.print("Please enter a positive integer: ");
-                    continue;
-                } else {
-                    validationSuccessful = true;
-                }
-            } catch (NumberFormatException e) { //If String is unable to be converted to an Int
-                System.out.println("Please enter an integer number of players:");
-
+            if(numberOfPlayersString.equals("E")){
+                System.exit(0);
+                continue;
             }
+            else{
+                try {
+                    noOfPlayersInput = Integer.parseInt(numberOfPlayersString); //Converts String to Int
+                    // validate that the input is positive
+                    if (noOfPlayersInput < 0) {
+                        System.out.print("Please enter a positive integer: ");
+                        continue;
+                    } else {
+                        validationSuccessful = true;
+                    }
+                } catch (NumberFormatException e) { //If String is unable to be converted to an Int
+                    System.out.println("Please enter an integer number of players:");
+                }
+            }
+
         } while (validationSuccessful == false);
 
         return noOfPlayersInput;
     }
 
+    /**
+     * Game main.
+     */
     public static void gameMain() { // this goes through the actions of the game
 
         // starts by setting up the game
@@ -88,6 +125,13 @@ public class PebbleGame {
     }
 
 
+    /**
+     * Read file string.
+     *
+     * @param fileName the file name
+     * @return the string
+     * @throws FileNotFoundException the file not found exception
+     */
     public static String readFile(File fileName) throws FileNotFoundException {
         try{
             Scanner reader = new Scanner(fileName);
@@ -103,6 +147,12 @@ public class PebbleGame {
         return null;
     }
 
+    /**
+     * Gets next pebble.
+     *
+     * @param data the data
+     * @return the next pebble
+     */
     public static String getNextPebble(String data) {
             // takes a string (line from a file) and picks an element of that csv List
         String[] dataList = data.split(",");
@@ -111,15 +161,29 @@ public class PebbleGame {
         return dataList[randomNum];
     }
 
+    /**
+     * Player won.
+     *
+     * @param PlayerName the player name
+     */
     public static void playerWon(String PlayerName){
         //end the threads
         System.out.println("Congratulations to " + PlayerName + ", you have won the game.\nThe game is now over, Goodbye");
     }
 
 
+    /**
+     * The Winner.
+     */
     protected boolean winner = false;
 
-    protected synchronized boolean win(ArrayList<Integer> playerPebbles) {
+    /**
+     * Win boolean.
+     *
+     * @param playerPebbles the player pebbles
+     * @return the boolean
+     */
+    protected synchronized boolean win(ArrayList<Integer> playerPebbles) { //TODO need to notify all that the game has finished
         if (this.winner) {
             return this.winner;
         } else {
@@ -130,6 +194,7 @@ public class PebbleGame {
             if (playerPebbleValue == 100) {
                 this.winner = true;
                 System.out.println("The game has ended with Pebbles: " + playerPebbles);
+                // ends game
                 return true;
             } else {
                 return false;
@@ -137,43 +202,62 @@ public class PebbleGame {
         }
     }
 
-    /**
-    public void createPlayers(int noOfPlayers) {
-        for (Integer j = 0; j < noOfPlayers; j++) {
-            Runnable runnable = new Player("Player" + Integer.toString(j));
-            Thread thread = new Thread(runnable);
-            thread.setName("Player" + Integer.toString(j));
-            thread.start();
-        }
 
-    }
-     */
-    public static void pickPebble(){
+    public static void pickPebble() {
         // use getPebble method
         // threads?
     }
+
+    /**
+     * Discard pebble.
+     */
     public static void discardPebble(){
 
     }
 
-    class Player {
+    /**
+     * The type Player.
+     */
+    class Player extends Thread implements ActionListener {
+        //TODO threads should be created before initial pebbles are given to players
+        //TODO make the action listener work
         private String name;
         private int[] currentHand;
 
 
+        /**
+         * Instantiates a new Player.
+         *
+         * @param playerName the player name
+         */
         public Player(String playerName) {
             this.name = playerName;
 
         }
 
-        public String getName() {
+        /**
+         * Gets name.
+         *
+         * @return the name
+         */
+        public String getPlayersName() {
             return this.name;
 
         }
-        public int[] getCurrentHand(){
+
+        /**
+         *
+         * @return
+         */
+        public List<Integer> getCurrentHand(){
             return this.currentHand;
         }
 
+        /**
+         * Get hand sum int.
+         *
+         * @return the int
+         */
         public int getHandSum(){
             int HandSum = 0;
             for(int i = 0; i < this.currentHand.length; i++){
@@ -186,7 +270,12 @@ public class PebbleGame {
 
     }
 
-        public static void main(String args[]) {
+    /**
+     * Main.
+     *
+     * @param args the args
+     */
+    public static void main(String args[]) {
 
             gameMain();
 

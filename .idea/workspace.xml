@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Validation and testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bags.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECM2414_Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/ECM2414_Report.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame$Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
-    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins" />
+    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins">
+      <change beforePath="$PROJECT_DIR$/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +35,54 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/PebbleGame.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="6" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="4" end1="4" start2="7" end2="14" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="13" end1="13" start2="23" end2="29" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="19" end1="19" start2="35" end2="41" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="22" end1="22" start2="44" end2="45" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="24" end1="26" start2="47" end2="53" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="29" end1="30" start2="56" end2="57" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="35" end1="35" start2="62" end2="68" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="44" end1="55" start2="77" end2="95" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="56" end1="57" start2="96" end2="96" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="62" end1="62" start2="101" end2="104" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="90" end1="90" start2="132" end2="139" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="92" end1="93" start2="141" end2="142" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="105" end1="105" start2="154" end2="160" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="113" end1="113" start2="168" end2="173" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="119" end1="119" start2="179" end2="182" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="121" end1="122" start2="184" end2="191" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="132" end1="132" start2="201" end2="202" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="139" end1="147" start2="209" end2="209" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="148" end1="151" start2="210" end2="211" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="154" end1="154" start2="214" end2="218" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="158" end1="159" start2="222" end2="228" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="160" end1="161" start2="229" end2="243" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="163" end1="163" start2="245" end2="250" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="165" end1="165" start2="252" end2="253" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="167" end1="167" start2="255" end2="334" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="168" end1="169" start2="335" end2="341" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="170" end1="170" start2="342" end2="343" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="172" end1="173" start2="345" end2="351" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="176" end1="176" start2="354" end2="359" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="178" end1="179" start2="361" end2="362" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="188" end1="189" start2="371" end2="377" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Bags.java">
+      <ranges>
+        <range start1="19" end1="19" start2="19" end2="21" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="30" end1="31" start2="32" end2="33" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="32" end1="32" start2="34" end2="37" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="33" end1="33" start2="38" end2="43" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="34" end1="39" start2="44" end2="46" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="40" end1="40" start2="47" end2="53" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1zzcJhP7bQZyjksq4UJYX4SIqCN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,10 +92,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="Project Files" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -83,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635768060167</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Validation and testing">
+      <created>1636025758498</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636025758498</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,22 +168,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="28/10/2021 15:55" />
     <MESSAGE value="Adding flowchart to report" />
-    <MESSAGE value="Validation and testing" />
     <MESSAGE value="Changes by katiehopkins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by katiehopkins" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/PebbleGame.java</url>
-          <line>176</line>
-          <properties class="PebbleGame.Player" method="getHandSum">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Validation and testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validation and testing" />
   </component>
 </project>
