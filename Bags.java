@@ -34,13 +34,26 @@ public class Bags {
         writer.close();
     }
 
+    public void updateFileAdd(List<Integer> list) {
+        // some writer function here
+        BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
+        writer.write(list.toString().replaceAll("[\\[\\]]", ""));
+        writer.close();
+    }
+
+
     public void updateFileRemove(List<Integer> list) {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(this.FileName));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
+        //TODO empty the file
         writer.write(list.toString().replaceAll("[\\[\\]]", ""));
         writer.close();
     }
 
     public List<Integer> getBagPebbles() {
         return bagPebbles;
+    }
+
+    public void empty(){
+        //TODO empty the file
     }
 }

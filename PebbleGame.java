@@ -13,6 +13,12 @@ public class PebbleGame {
      * @param bag2
      * @param bag3
      */
+    Bags blackBagX;
+    Bags blackBagY;
+    Bags blackBagZ;
+    Bags whiteBagA;
+    Bags whiteBagB;
+    Bags whiteBadC;
     private static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) { // method to give the black bags values at beginning of the game
         int numberOfPebbles = numberOfPlayers * 11; // as in spec
         for (int i = 0; i < numberOfPebbles; i++) { // gives each bag a pebble for numberOfPebble times with a random int value
@@ -117,18 +123,17 @@ public class PebbleGame {
         File whiteBagBFile = new File("WhiteBagB.csv");
         File whiteBagCFile = new File("WhiteBagC.csv");
         //creates the bags themselves as objects with basic attributes
-        Bags blackBagX = new Bags("blackBagX", blackBagXFile); // initialising the bags to create the base objects
-        Bags blackBagY = new Bags("blackBagY", blackBagYFile);
-        Bags blackBagZ = new Bags("blackBagZ", blackBagZFile);
-        Bags whiteBagA = new Bags("whiteBagA", whiteBagAFile);
-        Bags whiteBagB = new Bags("whiteBagB", whiteBagBFile);
-        Bags whiteBagC = new Bags("whiteBagC", whiteBagCFile);
+        blackBagX = new Bags("blackBagX", blackBagXFile); // initialising the bags to create the base objects
+        blackBagY = new Bags("blackBagY", blackBagYFile);
+        blackBagZ = new Bags("blackBagZ", blackBagZFile);
+        whiteBagA = new Bags("whiteBagA", whiteBagAFile);
+        whiteBagB = new Bags("whiteBagB", whiteBagBFile);
+        whiteBagC = new Bags("whiteBagC", whiteBagCFile);
         // for the black bags, the bags are given the pebbles with the weights
-        createBlackBags(noOfPlayersInput, blackBagX, blackBagY, blackBagX);
+        createBlackBags(noOfPlayersInput, blackBagX, blackBagY, blackBagZ);
         // end of setup
 
     }
-
 
     /**
      * Read file string.
@@ -227,23 +232,14 @@ public class PebbleGame {
          */
         public Player(String playerName) {
             this.name = playerName;
-            this.fileName = "output.txt";
+            this.fileName = new File(playerName + "_output.txt");
 
         }
 
         /**
          * @param e
          */
-        public void ActionPeformed(ActionEvent e){
-            Scanner scan = new Scanner(System.in);
-            String input = scan.nextLine();
-            if(input.equals("E")) {
-                System.exit(0);
-            }else{
-                continue;
-            }
-        }
-        public void run(){
+        public void run() {
             //TODO take turn then wait for all other threads to have their turn
             //TODO then repeat until someone has won
             turn();
@@ -254,8 +250,21 @@ public class PebbleGame {
 
             }
             //TODO need to notify next player that they can now start their turn
+        }
 
-
+        public void checkBags() {
+            if (blackBagX.isEmpty()) {
+                blackBagX.updateFileAdd(whiteBagA.getBagPebble);
+                whiteBagA.empty();
+            }
+            if (blackBagY.isEmpty()) {
+                blackBagY.updateFileAdd(whiteBagB.getBagPebble);
+                whiteBagB.empty();
+            }
+            if (blackBagZ.isEmpty()) {
+                blackBagZ.updateFileAdd(whiteBagC.getBagPebble);
+                whiteBagC.empty();
+            }
         }
 
         synchronized public void turn() {
@@ -377,12 +386,6 @@ public class PebbleGame {
      * @param args the args
      */
     public static void main(String args[]) {
-
             gameMain();
-
-
-        }
-
-
+    }
 }
-
