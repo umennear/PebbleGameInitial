@@ -7,7 +7,6 @@ public class Bags {
     public List<Integer> bagPebbles = Collections.synchronizedList(new ArrayList<Integer>());
     private File fileName;
 
-
     /**
      *
      * @param name
@@ -45,14 +44,17 @@ public class Bags {
         }
         return false;
     }
+
 /**
-    public void updateFileAdd(String data) {
-        // some writer function here
-        BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
-        writer.write(data);
-        writer.close();
-    }
-*/
+ public void updateFileAdd(String data) {
+ // some writer function here
+ BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
+ writer.write(data);
+ writer.close();
+ }
+
+ public void updateFileAdd(List<Integer> list) {
+ */
     /**
      * Delete the contents of the file and rewrites the new array list of the pebbles
      * @param list
@@ -65,14 +67,15 @@ public class Bags {
         writer.write(list.toString().replaceAll("[\\[\\]]", ""));
         writer.close();
     }
+
 /**
 
-    public void updateFileRemove(List<Integer> list) {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
-        //TODO empty the file
-        writer.write(list.toString().replaceAll("[\\[\\]]", ""));
-        writer.close();
-    }
+ public void updateFileRemove(List<Integer> list) {
+ BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
+ //TODO empty the file
+ writer.write(list.toString().replaceAll("[\\[\\]]", ""));
+ writer.close();
+ }
  */
 
     /**
@@ -83,4 +86,7 @@ public class Bags {
         return bagPebbles;
     }
 
+    public void empty(){
+        //TODO empty the file
+    }
 }

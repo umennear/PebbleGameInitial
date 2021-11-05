@@ -222,6 +222,7 @@ public class PebbleGame {
         public List<Integer> currentHand = Collections.synchronizedList(new ArrayList<Integer>());
         public String lastPickUp;
         public File fileName;
+        public boolean discard;
 
         /**
          * Instantiates a new Player.
@@ -231,30 +232,48 @@ public class PebbleGame {
         public Player(String playerName) {
 
             this.name = playerName;
-            this.fileName = New File(playerName + "_output.txt");
+            try {
+                fileName = new File(playerName + ".txt");
+                if (fileName.createNewFile()) {
+                    return;
+                } else {
+                    System.out.println("File already exists.");
+                }
+            } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+
+            for(int i = 0; i <10; i++){
+                pickUp();
+            }
 
         }
+
 
         /**
          * @param e
-         */
-        public void ActionPeformed(ActionEvent e){
+
+        public String ActionPeformed(ActionEvent e) {
             Scanner scan = new Scanner(System.in);
             String input = scan.nextLine();
-            if(input.equals("E")) {
+            if (input.equals("E")) {
                 System.exit(0);
-            }else{
-                continue;
+            } else {
+                return null;
             }
         }
-        public void run(){
+        */
 
-
-            turn();
-            //TODO check if winner
-            try {
-                wait();
-            } catch (Exception e) {
+        public void run() {
+            boolean ENotInput = true;
+            Scanner scan = new Scanner(System.in);
+            do {
+                turn();
+                //TODO check if winner
+                try {
+                    wait();
+                } catch (Exception e) {
 
             }
             //TODO need to notify next player that they can now start their turn
@@ -267,7 +286,7 @@ public class PebbleGame {
             checkBags();
             pickUp();
             // blackBag.updateFile(pebbles);
-            //TODO: write to file for player and black bag
+            //TODO: write to file for black bag
         }
 
         /**
@@ -278,40 +297,56 @@ public class PebbleGame {
 
         synchronized public void discard() {
             //put bag setters here
-
+            discard = true;
             Random rand = new Random();
             int pebbleNumber = rand.nextInt(10);
-            int pebbleWeight = this.currentHand.remove(pebbleNumber);
-            List<Integer> pebbles;
-            Bags bag;
-            Bags whiteBag;
+            int pebbleWeight = this.currentHand.get(pebbleNumber);
+            this.currentHand.remove(pebbleNumber);
+            String whiteBagLetter;
+            ArrayList<Integer> pebbles;
+            int bag;
+            Bags whiteBag = new Bags();
             if (lastPickUp == null) {
                 int bag = randomNumGenerator(0, 3);
                 if (bag == 1) {
                     whiteBag = whiteBagA;
+                    whiteBagLetter = "A";
                 } else if (bag == 2) {
                     whiteBag = whiteBagB;
+                    whiteBagLetter = "B";
                 } else if (bag == 3) {
                     whiteBag = whiteBagC;
                 }
             } else if (lastPickUp == "X") {
-                whiteBag = whiteBagA;
+                 whiteBag = whiteBagA;
+                 whiteBagLetter = "A"
             } else if (lastPickUp == "Y") {
-                whiteBag = whiteBagB;
+                 whiteBag = whiteBagB;
+                 whiteBagLetter = "B";
             } else if (lastPickUp == "Z") {
-                whiteBag = whiteBagC;
+                 whiteBag = whiteBagC;
+                 whiteBagLetter = "C";
             }
-            whiteBag.add(pebbleWeight);
-            whiteBag.updateFileAdd(pebbleWeight);
-            this.currentHand.add(pebbleWeight);
-            //TODO: Output file writer
-            updateFileAdd(pebbleWeight);
+            whiteBag.addPebble(pebbleWeight);
+            //whiteBag.updateFile(pebbleWeight);
+            updateFile(discard, currentHand, pebbleWeight ,whiteBagLetter);
+
+        }
+
+        synchronized public void checkBags(Bags bag1, Bags bag2, Bags bag3){
+        //TODO check if bags are empty
+            bag1.isEmpty();
+            bag2.isEmpty();
+            bag3.isEmpty();
+
+
 
         }
 
         synchronized public void pickUp() {
-            Bags bag;
-            int newBag = randomNumGenerator(0,3);
+            discard = false;
+            Bags bag = new Bags();
+            int newBag = randomNumGenerator(0, 3);
 
             if (newBag == 1) {
                 bag = blackBagX;
@@ -328,29 +363,32 @@ public class PebbleGame {
             int pebbleIndex = randomNumGenerator(0, pebblesize - 1);
             int pick = pebbles.get(pebbleIndex);
             bag.removePebble(pebbleIndex);
+            currentHand.add(pick);
+            updateFile(discard, currentHand,pick, lastPickUp);
+
             //TODO: write to player file and black bag
         }
 
 
         /**
-        * @return
-        */
+         * @return
+         */
         public String getPlayersName() {
             return this.name;
         }
 
         /**
-        * @return
-        */
-        public List<Integer> getCurrentHand() {
+         * @return
+         */
+        public ArrayList<Integer> getCurrentHand() {
             return this.currentHand;
         }
 
         /**
-        * Get hand sum int.
-        *
-        * @return the int
-        */
+         * Get hand sum int.
+         *
+         * @return the int
+         */
         public int getHandSum() {
             int HandSum = 0;
             for (int i = 0; i < this.currentHand.size(); i++) {
@@ -368,14 +406,26 @@ public class PebbleGame {
             writer.close();
         }
 
-        public void updateFileRemove(List<Integer> list, String data, String bag) {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
-            writer.write(this.name + "has discarded a " + data + " to bag " +  bag);
-            writer.write(list.toString().replaceAll("[\\[\\]]", ""));
-            writer.close();
+        public void updateFile(boolean disgard, ArrayList<Integer> list, String data, String bag) { //focus on player output file
+            try {
+                String log = "";
+                if (disgard) {
+                    log += this.getPlayersName() + " has discarded " + data + " pebble to bag " + bag;
+                }else {
+                    log +=  this.getPlayersName() + " has drawn a " + data + " pebble from bag " + bag;
+                }
+                log += "\n" + this.getPlayersName() + " hand is " + list.toString().replaceAll("[\\[\\]]", "") + "\n";
+                BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName));
+                buffer.write(log);
+                buffer.close();
+            }
+            catch(IOException e){
+                System.out.println("Something has gone really and truly wrong :( ");
+            }
         }
 
     }
+
 
 
     /**
@@ -392,4 +442,5 @@ public class PebbleGame {
 
 
 }
+
 
