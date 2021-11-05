@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Bags {
     private String name;
-    public List<Integer> bagPebbles = Collections.synchronizedList(new ArrayList<Integer>());
+    public ArrayList<Integer> bagPebbles = new ArrayList<Integer>();
     private File fileName;
 
     /**
@@ -16,6 +16,9 @@ public class Bags {
     public Bags(String name, File fileName) {
         this.name = name;
         this.fileName = fileName;
+    }
+    public Bags(){
+
     }
 
     /**
@@ -59,13 +62,19 @@ public class Bags {
      * Delete the contents of the file and rewrites the new array list of the pebbles
      * @param list
      */
-    public void updateFile(List<Integer> list) {
+    public void updateFile(ArrayList<Integer> list) throws IOException {
         // some writer function here
 
         //TODO empty the file
-        BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
-        writer.write(list.toString().replaceAll("[\\[\\]]", ""));
-        writer.close();
+        try {
+
+            BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName));
+            buffer.write(list.toString().replaceAll("[\\[\\]]", "")); // have you added the new arraylist??
+            buffer.close();
+        }
+        catch( IOException e){
+            System.out.println("Something has gone really and truly wrong :( ");
+        }
     }
 
 /**
@@ -82,7 +91,7 @@ public class Bags {
      *
      * @return
      */
-    public List<Integer> getBagPebbles() {
+    public ArrayList<Integer> getBagPebbles() {
         return bagPebbles;
     }
 
