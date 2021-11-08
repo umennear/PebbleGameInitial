@@ -23,7 +23,7 @@ public class PebbleGame {
     static volatile Bags whiteBagC;
     public volatile int noOfPlayers;
 
-    private static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) { // method to give the black bags values at beginning of the game
+    private static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) throws IOException { // method to give the black bags values at beginning of the game
         int numberOfPebbles = numberOfPlayers * 11; // as in spec
         for (int i = 0; i < numberOfPebbles; i++) { // gives each bag a pebble for numberOfPebble times with a random int value
             bag1.addPebble(randomNumGenerator(0, 25));
@@ -32,6 +32,7 @@ public class PebbleGame {
             bag2.updateFile(bag2.getBagPebbles());
             bag3.addPebble(randomNumGenerator(0, 25));
             bag3.updateFile(bag3.getBagPebbles());
+
         }
 
 
@@ -117,7 +118,7 @@ public class PebbleGame {
     /**
      * Game main.
      */
-    public static void gameMain() {
+    public static void gameMain() throws IOException {
         // this goes through the actions of the game
         // starts by setting up the game
         Scanner scan = new Scanner(System.in);
@@ -192,10 +193,14 @@ public class PebbleGame {
         System.out.println("Congratulations to " + PlayerName + ", you have won the game.\nThe game is now over, Goodbye");
     }
 
-    public synchronized void endGame(){
-
+    public int getNoOfPlayers() {
+        return noOfPlayers;
     }
 
+    //would need a constructor for pebble game to use
+    public void setNoOfPlayers(int noOfPlayers) {
+        this.noOfPlayers = noOfPlayers;
+    }
 
 
     /**
@@ -232,17 +237,25 @@ public class PebbleGame {
             }
 
             for(int i = 0; i <10; i++){
-                pickUp();
+                try {
+                    pickUp();
+                }catch(IOException e){
+                    System.out.println("Cannot write to file correctly.");
+                }
             }
 
         }
 
 
-        public void run() {
+        public synchronized void run() {
             boolean ENotInput = true;
             Scanner scan = new Scanner(System.in);
             do {
-                turn();
+                try {
+                    turn();
+                }catch(IOException e){
+                    System.out.println("Couldnot execute players turns.");
+                }
                 if (getHandSum() == 100 && getCurrentHand().size() == 10){
                     playerWon(this.getPlayersName());
                     this.winner = true;
@@ -266,12 +279,14 @@ public class PebbleGame {
 
         }
 
-         public synchronized void turn() {
-
-            discard();
-            checkBags(blackBagX,blackBagY,blackBagZ);
-            pickUp();
-
+         public synchronized void turn() throws IOException{
+         try {
+             discard();
+             checkBags(blackBagX, blackBagY, blackBagZ);
+             pickUp();
+         }catch(IOException e){
+             System.out.println("Cannot write to file.");
+         }
         }
 
         /**
@@ -280,14 +295,14 @@ public class PebbleGame {
          * @return the name
          */
 
-        synchronized public void discard() {
+        synchronized public void discard() throws IOException {
             //put bag setters here
             discard = true;
             Random rand = new Random();
             int pebbleNumber = rand.nextInt(10);
             int pebbleWeight = this.currentHand.get(pebbleNumber);
             this.currentHand.remove(pebbleNumber);
-            String whiteBagLetter;
+            String whiteBagLetter = "";
             ArrayList<Integer> pebbles;
             int bag;
             Bags whiteBag = new Bags();
@@ -316,11 +331,11 @@ public class PebbleGame {
             whiteBag.addPebble(pebbleWeight);
             whiteBag.updateFileRemove();
             whiteBag.updateFile(whiteBag.getBagPebbles());
-            updateFile(discard, currentHand, pebbleWeight ,whiteBagLetter);
+            updateFile(discard, currentHand, pebbleWeight , whiteBagLetter);
 
         }
 
-        synchronized public void checkBags(Bags bag1, Bags bag2, Bags bag3){
+        synchronized public void checkBags(Bags bag1, Bags bag2, Bags bag3) throws IOException{
             //arguments must be in alphabelical order to be paired correctly
             if (bag1.isEmpty() == true){
                 //gets the arraylist of the corresponding white bag
@@ -350,7 +365,7 @@ public class PebbleGame {
 
         }
 
-        synchronized public void pickUp() {
+        synchronized public void pickUp() throws IOException{
             discard = false;
             Bags bag = new Bags();
             int newBag = randomNumGenerator(0, 3);
@@ -404,7 +419,7 @@ public class PebbleGame {
         public int getHandSum() {
             int HandSum = 0;
             for (int i = 0; i < this.currentHand.size(); i++) {
-                HandSum = HandSum + i;
+                HandSum = HandSum + currentHand.get(i);
             }
             return HandSum;
         }
@@ -422,6 +437,7 @@ public class PebbleGame {
                 BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName));
                 buffer.write(log);
                 buffer.close();
+                System.out.println(log);
             }
             catch(IOException e){
                 System.out.println("Something has gone really and truly wrong :( ");
@@ -439,10 +455,14 @@ public class PebbleGame {
      */
     public static void main(String args[]) {
 
+        try {
             gameMain();
-
+        }catch(IOException e){
 
         }
+
+
+    }
 
 
 }
