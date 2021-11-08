@@ -1,0 +1,2 @@
+player1 has drawn a 24 pebble from bag X
+player1 hand is 0, 17, 24
