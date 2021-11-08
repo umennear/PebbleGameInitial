@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Adding flowchart to report">
+    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="04/11/2021 17:26">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bags.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bags.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame$Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PebbleGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGameTest.java" afterDir="false" />
     </list>
-    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="">
-      <change beforePath="$PROJECT_DIR$/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.java" afterDir="false" />
-    </list>
+    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,64 +16,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/PebbleGame.java">
-      <ranges>
-        <range start1="15" end1="15" start2="15" end2="22" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="45" end1="46" start2="52" end2="53" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="50" end1="51" start2="57" end2="58" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="112" end1="115" start2="119" end2="122" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="121" end1="127" start2="128" end2="134" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="217" end1="218" start2="224" end2="225" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="221" end1="222" start2="228" end2="229" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="224" end1="224" start2="231" end2="232" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="233" end1="235" start2="241" end2="256" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="236" end1="236" start2="257" end2="258" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="239" end1="241" start2="261" end2="263" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="243" end1="244" start2="265" end2="266" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="245" end1="247" start2="267" end2="269" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="249" end1="257" start2="271" end2="282" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="258" end1="261" start2="283" end2="289" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="280" end1="281" start2="308" end2="309" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="283" end1="287" start2="311" end2="317" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="288" end1="289" start2="318" end2="319" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="291" end1="291" start2="321" end2="322" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="293" end1="293" start2="324" end2="325" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="295" end1="295" start2="327" end2="328" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="297" end1="298" start2="330" end2="332" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="299" end1="300" start2="333" end2="335" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="301" end1="302" start2="336" end2="338" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="303" end1="308" start2="339" end2="342" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="310" end1="310" start2="344" end2="348" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="312" end1="314" start2="350" end2="353" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="318" end1="318" start2="357" end2="358" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="325" end1="326" start2="365" end2="366" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="330" end1="330" start2="370" end2="373" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="335" end1="337" start2="378" end2="380" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="342" end1="345" start2="385" end2="388" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="349" end1="353" start2="392" end2="396" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="361" end1="369" start2="404" end2="404" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="370" end1="375" start2="405" end2="421" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="378" end1="378" start2="424" end2="425" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="394" end1="394" start2="441" end2="442" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/Bags.java">
-      <ranges>
-        <range start1="6" end1="7" start2="6" end2="7" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="9" end1="10" start2="9" end2="9" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="20" end1="20" start2="19" end2="22" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="47" end1="47" start2="49" end2="50" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="48" end1="55" start2="51" end2="60" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="59" end1="60" start2="64" end2="65" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="63" end1="66" start2="68" end2="77" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="67" end1="67" start2="78" end2="79" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="69" end1="75" start2="81" end2="87" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="81" end1="82" start2="93" end2="94" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="85" end1="85" start2="97" end2="100" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1zzcJhP7bQZyjksq4UJYX4SIqCN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -126,18 +61,15 @@
       <option name="project" value="LOCAL" />
       <updated>1635764075887</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="04/11/2021 17:26">
+      <created>1636046762975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636046762975</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -154,6 +86,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="28/10/2021 15:55" />
     <MESSAGE value="Adding flowchart to report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding flowchart to report" />
+    <MESSAGE value="04/11/2021 17:26" />
+    <option name="LAST_COMMIT_MESSAGE" value="04/11/2021 17:26" />
   </component>
 </project>

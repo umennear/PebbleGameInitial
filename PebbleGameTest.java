@@ -8,9 +8,9 @@ import static org.junit.Assert.*;
 public class GameTest{
     @Before
     public void setUp(){
-        File file = new File("");
-        Scanner reader = new Scanner(file);
-        String expected == //contents of the test file
+        public File file = new File("");
+        public Scanner reader = new Scanner(file);
+        public String expected == //contents of the test file
         public PebbleGame game = new PebbleGame();
         String data = "2,3,4,5,6,7,8,9,10";
         File blackBagXFile = new File("testBlackBagX.csv");
@@ -81,6 +81,40 @@ public class GameTest{
     @Test void TestHandSum(int expected){
         assert(player1.handSum() == expected );
     }
+    @Test
+    public void TestRun(){
+
+    }
+    @Test
+    public void TestDicard(){
+        String[] before = player.getCurrentHand();
+        Discard();
+        String[] After = player.getCurrentHand();
+        assert(before.length = after length -1);
+    }
+    @Test
+    public void TestPickUp(){
+        String[] before = player.getCurrentHand();
+        PickUp();
+        String[] After = player.getCurrentHand();
+        assert(before.length = after.length +1);
+    }
+    @Test
+    public void TestUpdateFile(){
+
+        PickUp();
+        UpdateFile();
+        ArrayList<String> handAfter = player.getCurrentHand();
+        ArrayList<String> fileAfter = readFile();
+
+        assert(handAfter == fileAfter);
+
+    }
+    @Test
+    public void TestCheckBags(){
+
+    }
+
 
     public int editiedVersionCheckIntInput(String input){ // these are exact replicas of the functions, however they take hard-coded strings instead of inputs, for testing purposes
         boolean validationSuccessful = false;
