@@ -34,7 +34,7 @@ public class PebbleGame {
             bag3.updateFile(bag3.getBagPebbles());
         }
 
-        //TODO maybe need to update file
+
     }
 
     /**
@@ -189,8 +189,11 @@ public class PebbleGame {
      * @param PlayerName the player name
      */
     public static void playerWon(String PlayerName) {
-        //TODO end the threads
         System.out.println("Congratulations to " + PlayerName + ", you have won the game.\nThe game is now over, Goodbye");
+    }
+
+    public synchronized void endGame(){
+
     }
 
 
@@ -199,13 +202,13 @@ public class PebbleGame {
      * The type Player.
      */
     class Player extends Thread  {
-        //TODO threads should be created before initial pebbles are given to players
         //TODO make the action listener work
         public String name;
         public ArrayList<Integer> currentHand = new ArrayList<Integer>();
         public String lastPickUp;
         public File fileName;
         public boolean discard;
+        public boolean winner;
 
         /**
          * Instantiates a new Player.
@@ -234,26 +237,15 @@ public class PebbleGame {
         }
 
 
-        /**
-         * @param e
-
-        public String ActionPeformed(ActionEvent e) {
-            Scanner scan = new Scanner(System.in);
-            String input = scan.nextLine();
-            if (input.equals("E")) {
-                System.exit(0);
-            } else {
-                return null;
-            }
-        }
-        */
-
         public void run() {
             boolean ENotInput = true;
             Scanner scan = new Scanner(System.in);
             do {
                 turn();
-                //TODO check if winner
+                if (getHandSum() == 100 && getCurrentHand().size() == 10){
+                    playerWon(this.getPlayersName()));
+                    this.winner = true;
+                }
                 try {
                     wait();
                 } catch (Exception e) {
@@ -263,16 +255,16 @@ public class PebbleGame {
                     ENotInput = false;
                 }
                 //TODO need to notify next player that they can now start their turn
-            } while(ENotInput);
+            } while(ENotInput || winner == true);
 
         }
 
         synchronized public void turn() {
+
             discard();
             checkBags(blackBagX,blackBagY,blackBagZ);
             pickUp();
-            // blackBag.updateFile(pebbles);
-            //TODO: write to file for black bag
+
         }
 
         /**
@@ -315,32 +307,39 @@ public class PebbleGame {
                  whiteBagLetter = "C";
             }
             whiteBag.addPebble(pebbleWeight);
-            //whiteBag.updateFile(pebbleWeight);
+            whiteBag.updateFileRemove();
+            whiteBag.updateFile(whiteBag.getBagPebble());
             updateFile(discard, currentHand, pebbleWeight ,whiteBagLetter);
 
         }
 
         synchronized public void checkBags(Bags bag1, Bags bag2, Bags bag3){
-        //TODO check if bags are empty
+            //arguments must be in alphabelical order to be paired correctly
             if (bag1.isEmpty() == true){
+                //gets the arraylist of the corresponding white bag
                 ArrayList<Integer> pebblesA = whiteBagA.getBagPebbles();
+                //adds it to the black bag
                 blackBagX.updateFile(pebblesA);
+                //removes those pebbles from the white bag
                 whiteBagA.updateFileRemove();
 
             }
             if(bag2.isEmpty() == true){
+                //gets the arraylist of the corresponding white bag
                 ArrayList<Integer> pebblesB =whiteBagB.getBagPebbles();
+                //adds it to the black bag
                 blackBagY.updateFile(pebblesB);
+                //removes those pebbles from the white bag
                 whiteBagB.updateFileRemove();
             }
             if(bag3.isEmpty() == true){
+                //gets the arraylist of the corresponding white bag
                 ArrayList<Integer> pebblesC = whiteBagC.getBagPebbles();
+                //adds it to the black bag
                 blackBagZ.updateFile(pebblesC);
+                //removes those pebbles from the white bag
                 whiteBagC.updateFileRemove();
-
             }
-
-
 
         }
 
@@ -366,9 +365,13 @@ public class PebbleGame {
             int pick = pebbles.get(pebbleIndex);
             bag.removePebble(pebbleIndex);
             currentHand.add(pick);
-            updateFile(discard, currentHand,pick, lastPickUp);
+            //writes to players log
+            updateFile(discard, currentHand, pick, lastPickUp);
+            //deletes contents of bag file and replaces it with the new contents
+            bag.updateFileRemove();
+            bag.updateFile(bag.getBagPebbles());
 
-            //TODO: write to player file and black bag
+
         }
 
 

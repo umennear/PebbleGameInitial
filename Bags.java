@@ -48,16 +48,7 @@ public class Bags {
         return false;
     }
 
-/**
- public void updateFileAdd(String data) {
- // some writer function here
- BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
- writer.write(data);
- writer.close();
- }
 
- public void updateFileAdd(List<Integer> list) {
- */
     /**
      * Delete the contents of the file and rewrites the new array list of the pebbles
      * @param list
@@ -65,15 +56,15 @@ public class Bags {
     public void updateFile(ArrayList<Integer> list) throws IOException {
         // some writer function here
 
-        //TODO empty the file
+
         try {
 
             BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName));
-            buffer.write(list.toString().replaceAll("[\\[\\]]", "")); // have you added the new arraylist??
+            buffer.write(list.toString().replaceAll("[\\[\\]]", "")); //adding arraylist to file
             buffer.close();
         }
         catch( IOException e){
-            System.out.println("Something has gone really and truly wrong :( ");
+            System.out.println("Unable to write to bag file.");
         }
     }
 
@@ -83,7 +74,7 @@ public class Bags {
             writer.close();
         }
         catch( IOException e){
-            System.out.println("Something has gone really and truly wrong :( ");
+            System.out.println("Unable to remove contents from bag file.");
      }
 
 
@@ -95,7 +86,4 @@ public class Bags {
         return bagPebbles;
     }
 
-    public void empty(){
-        //TODO empty the file
-    }
 }
