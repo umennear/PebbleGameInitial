@@ -188,36 +188,6 @@ public class PebbleGame {
     }
 
 
-    /**
-     * The Winner.
-     */
-    protected boolean winner = false;
-
-    /**
-     * Win boolean.
-     *
-     * @param playerPebbles the player pebbles
-     * @return the boolean
-     */
-    protected synchronized boolean win(ArrayList<Integer> playerPebbles) { //TODO need to notify all that the game has finished
-        if (this.winner) {
-            return this.winner;
-        } else {
-            int playerPebbleValue = 0;
-            for (Integer sum : playerPebbles) {
-                playerPebbleValue += sum;
-            }
-            if (playerPebbleValue == 100) {
-                this.winner = true;
-                System.out.println("The game has ended with Pebbles: " + playerPebbles);
-                // ends game
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }
-
 
     /**
      * The type Player.
@@ -293,7 +263,7 @@ public class PebbleGame {
 
         synchronized public void turn() {
             discard();
-            checkBags();
+            checkBags(blackBagX,blackBagY,blackBagZ);
             pickUp();
             // blackBag.updateFile(pebbles);
             //TODO: write to file for black bag
@@ -330,7 +300,7 @@ public class PebbleGame {
                 }
             } else if (lastPickUp == "X") {
                  whiteBag = whiteBagA;
-                 whiteBagLetter = "A"
+                 whiteBagLetter = "A";
             } else if (lastPickUp == "Y") {
                  whiteBag = whiteBagB;
                  whiteBagLetter = "B";
@@ -346,9 +316,23 @@ public class PebbleGame {
 
         synchronized public void checkBags(Bags bag1, Bags bag2, Bags bag3){
         //TODO check if bags are empty
-            bag1.isEmpty();
-            bag2.isEmpty();
-            bag3.isEmpty();
+            if (bag1.isEmpty() == true){
+                ArrayList<Integer> pebblesA = whiteBagA.getBagPebbles();
+                blackBagX.updateFile(pebblesA);
+                whiteBagA.updateFileRemove();
+
+            }
+            if(bag2.isEmpty() == true){
+                ArrayList<Integer> pebblesB =whiteBagB.getBagPebbles();
+                blackBagY.updateFile(pebblesB);
+                whiteBagB.updateFileRemove();
+            }
+            if(bag3.isEmpty() == true){
+                ArrayList<Integer> pebblesC = whiteBagC.getBagPebbles();
+                blackBagZ.updateFile(pebblesC);
+                whiteBagC.updateFileRemove();
+
+            }
 
 
 
@@ -410,7 +394,7 @@ public class PebbleGame {
         }
 
 
-        public void updateFile(boolean disgard, ArrayList<Integer> list, String data, String bag) { //focus on player output file
+        public void updateFile(boolean disgard, ArrayList<Integer> list, int data, String bag) { //focus on player output file
             try {
                 String log = "";
                 if (disgard) {

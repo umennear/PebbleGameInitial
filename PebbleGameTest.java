@@ -1,4 +1,4 @@
-import.java.util.*;
+import java.util.*;
 import java.io.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

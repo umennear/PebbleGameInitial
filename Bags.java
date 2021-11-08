@@ -77,15 +77,15 @@ public class Bags {
         }
     }
 
-/**
+     public void updateFileRemove() throws IOException{
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName, false));
+            writer.close();
+        }
+        catch( IOException e){
+            System.out.println("Something has gone really and truly wrong :( ");
+     }
 
- public void updateFileRemove(List<Integer> list) {
- BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName));
- //TODO empty the file
- writer.write(list.toString().replaceAll("[\\[\\]]", ""));
- writer.close();
- }
- */
 
     /**
      *

@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="04/11/2021 17:26">
+    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Adding flowchart to report">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_11_2021,_10_50_am_[Default_Changelist]/ECM2414_Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_11_2021,_10_50_am_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_11_2021__10_50_am__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PebbleGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGameTest.java" afterDir="false" />
     </list>
-    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="" />
+    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="">
+      <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PebbleGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGameTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +25,40 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/PebbleGame.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="22" end1="22" start2="23" end2="25" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="26" end1="26" start2="29" end2="30" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="27" end1="27" start2="31" end2="32" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="28" end1="28" start2="33" end2="34" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="118" end1="119" start2="124" end2="125" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="128" end1="129" start2="134" end2="135" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="190" end1="220" start2="196" end2="196" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="295" end1="296" start2="271" end2="272" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="332" end1="333" start2="308" end2="309" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="348" end1="351" start2="324" end2="338" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="412" end1="413" start2="399" end2="400" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/PebbleGameTest.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="6" end1="6" start2="6" end2="7" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="10" end1="14" start2="11" end2="14" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="15" end1="18" start2="15" end2="24" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="21" end1="23" start2="27" end2="29" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="24" end1="29" start2="30" end2="30" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="43" end1="44" start2="44" end2="45" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="62" end1="64" start2="63" end2="65" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="67" end1="69" start2="68" end2="69" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="92" end1="93" start2="92" end2="93" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="99" end1="100" start2="99" end2="100" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="116" end1="116" start2="116" end2="117" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="1zzcJhP7bQZyjksq4UJYX4SIqCN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -30,6 +73,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,15 +105,18 @@
       <option name="project" value="LOCAL" />
       <updated>1635764075887</updated>
     </task>
-    <task id="LOCAL-00004" summary="04/11/2021 17:26">
-      <created>1636046762975</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1636046762975</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -86,7 +133,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="28/10/2021 15:55" />
     <MESSAGE value="Adding flowchart to report" />
-    <MESSAGE value="04/11/2021 17:26" />
-    <option name="LAST_COMMIT_MESSAGE" value="04/11/2021 17:26" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding flowchart to report" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
