@@ -4,28 +4,29 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.lang.*;
 
 public class GameTest{
     @Before
     public void setUp(){
-        public File file = new File("");
-        public Scanner reader = new Scanner(file);
-        public String expected == //contents of the test file
-        public PebbleGame game = new PebbleGame();
+        File file = new File("");
+        Scanner reader = new Scanner(file);
+        PebbleGame game = new PebbleGame();
         String data = "2,3,4,5,6,7,8,9,10";
-        File blackBagXFile = new File("testBlackBagX.csv");
-        File blackBagYFile = new File("testBlackBagY.csv");
-        File blackBagZFile = new File("testBlackBagZ.csv");
+        /*File creationBlackBagXFile = new File("testBlackBagX.csv"); // the creation versions will be used to test our game set up with empty bags
+        File creationBlackBagYFile = new File("testBlackBagY.csv");// this will allow us to add in new pebbles and check that the code is working correctly with the base case
+        File creationBlackBagZFile = new File("testBlackBagZ.csv");
+        Bags creationBlackBagX = new Bags("blackBagX", blackBagXFile); // initialising the bags to create the base objects
+        Bags creationBlackBagY = new Bags("blackBagY", blackBagYFile);
+        Bags creationBlackBagZ = new Bags("blackBagZ", blackBagZFile);*/
+        File blackBagXFile = new File("example_file_1.csv");
+        File blackBagYFile = new File("example_file_2.csv");
+        File blackBagZFile = new File("example_file_3.csv");
         Bags blackBagX = new Bags("blackBagX", blackBagXFile); // initialising the bags to create the base objects
         Bags blackBagY = new Bags("blackBagY", blackBagYFile);
         Bags blackBagZ = new Bags("blackBagZ", blackBagZFile);
-        noOfPlayers = 2;
-        public Player player1 = new Player("Player 1");
-    }
-    @After
-    public void cleanUp(){
-        reader.close();
-
+        int noOfPlayers = 2;
+        Player player1 = new Player("Player 1");
     }
 
     @Test
@@ -41,7 +42,7 @@ public class GameTest{
     @Test
     public void TestRandomNumGenerator(){ // not very rigorous, however is one of the best ways we can test when deasling with random numbers
 
-        for(int i = 0; i < 20, i++){
+        for(int i = 0; i < 20; i++){
             int number = this.Game.RandomNumberGenerator(0, 25);
             assert(number <=25 && number >= 0);
         }
@@ -60,13 +61,12 @@ public class GameTest{
         assert(editiedVersionCheckIntInput("5") == 5); //correct data
         assert(editiedVersionCheckIntInput("-1") == null); //erronous data
         assert(editiedVersionCheckIntInput("hello") == null); // erronous data
-        assert(editiedVersionCheckIntInput("0") == null) // boundary erronous data
-        assert(editiedVersionCheckIntInput("1") == 1) // boundary correct data
+        assert(editiedVersionCheckIntInput("0") == null); // boundary erronous data
+        assert(editiedVersionCheckIntInput("1") == 1); // boundary correct data
     }
     @Test
     public void TestCheckFileInput(){ //what kinds of data to test?
-        editedVersionCheckFileInput("")
-        editiedVersionCheckFile
+        editedVersionCheckFileInput("");
 
     }
 
@@ -90,14 +90,14 @@ public class GameTest{
         String[] before = player.getCurrentHand();
         Discard();
         String[] After = player.getCurrentHand();
-        assert(before.length = after length -1);
+        assert(before.length == after.length-1);
     }
     @Test
     public void TestPickUp(){
         String[] before = player.getCurrentHand();
         PickUp();
         String[] After = player.getCurrentHand();
-        assert(before.length = after.length +1);
+        assert(before.length == after.length +1);
     }
     @Test
     public void TestUpdateFile(){
@@ -114,6 +114,7 @@ public class GameTest{
     public void TestCheckBags(){
 
     }
+
 
 
     public int editiedVersionCheckIntInput(String input){ // these are exact replicas of the functions, however they take hard-coded strings instead of inputs, for testing purposes

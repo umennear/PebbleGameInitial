@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.*;
+import java.lang.*;
 
 /**
  * The type Pebble game.
@@ -20,12 +21,17 @@ public class PebbleGame {
     static Bags whiteBagA;
     static Bags whiteBagB;
     static Bags whiteBagC;
+    public int noOfPlayers;
+
     private static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) { // method to give the black bags values at beginning of the game
         int numberOfPebbles = numberOfPlayers * 11; // as in spec
         for (int i = 0; i < numberOfPebbles; i++) { // gives each bag a pebble for numberOfPebble times with a random int value
             bag1.addPebble(randomNumGenerator(0, 25));
+            bag1.updateFile(bag1.getBagPebbles());
             bag2.addPebble(randomNumGenerator(0, 25));
+            bag2.updateFile(bag2.getBagPebbles());
             bag3.addPebble(randomNumGenerator(0, 25));
+            bag3.updateFile(bag3.getBagPebbles());
         }
 
         //TODO maybe need to update file
@@ -116,7 +122,7 @@ public class PebbleGame {
         // starts by setting up the game
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\nThe integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n"); // opening remarks
-        int noOfPlayersInput = checkIntInput(scan);
+        this.noOfPlayers = checkIntInput(scan);
         File blackBagXFile = checkFileInput(scan, 1);
         File blackBagYFile = checkFileInput(scan, 2);
         File blackBagZFile = checkFileInput(scan, 3);
@@ -126,7 +132,7 @@ public class PebbleGame {
         File whiteBagBFile = new File("WhiteBagB.csv");
         File whiteBagCFile = new File("WhiteBagC.csv");
         //creates the bags themselves as objects with basic attributes
-         blackBagX = new Bags("blackBagX", blackBagXFile); // initialising the bags to create the base objects
+        blackBagX = new Bags("blackBagX", blackBagXFile); // initialising the bags to create the base objects
         blackBagY = new Bags("blackBagY", blackBagYFile);
         blackBagZ = new Bags("blackBagZ", blackBagZFile);
         whiteBagA = new Bags("whiteBagA", whiteBagAFile);
