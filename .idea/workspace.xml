@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Writing to files, cleaning up code and testing">
+    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Writing to file, cleaning up code and testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bags.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGame.java" afterDir="false" />
     </list>
     <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins" />
@@ -77,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636378828059</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Writing to file, cleaning up code and testing">
+      <created>1636380394864</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636380394864</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -107,7 +113,8 @@
     <MESSAGE value="Adding flowchart to report" />
     <MESSAGE value="Writing to files, cleaning up code and testing" />
     <MESSAGE value="Changes by katiehopkins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by katiehopkins" />
+    <MESSAGE value="Writing to file, cleaning up code and testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Writing to file, cleaning up code and testing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

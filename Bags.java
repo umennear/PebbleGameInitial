@@ -68,13 +68,13 @@ public class Bags {
         }
     }
 
-     public void updateFileRemove() throws IOException{
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName, false));
-            writer.close();
-        }
-        catch( IOException e){
-            System.out.println("Unable to remove contents from bag file.");
+     public void updateFileRemove() throws IOException {
+         try {
+             BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName, false));
+             writer.close();
+         } catch (IOException e) {
+             System.out.println("Unable to remove contents from bag file.");
+         }
      }
 
 

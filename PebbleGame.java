@@ -61,7 +61,7 @@ public class PebbleGame {
         File blackBagFile = null;
         // TODO if empty then this else something else
         do {
-            System.out.println("Please enter locations of bag number " + counter.toString() + " to load:");
+            System.out.println("Please enter locations of bag number " + counter + " to load:");
             String blackBagName = scan.nextLine();
             if (blackBagName.equals("E")) {
                 System.exit(0);
@@ -122,7 +122,7 @@ public class PebbleGame {
         // starts by setting up the game
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\nThe integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n"); // opening remarks
-        this.noOfPlayers = checkIntInput(scan);
+        int noOfPlayers = checkIntInput(scan);
         File blackBagXFile = checkFileInput(scan, 1);
         File blackBagYFile = checkFileInput(scan, 2);
         File blackBagZFile = checkFileInput(scan, 3);
@@ -139,7 +139,7 @@ public class PebbleGame {
         whiteBagB = new Bags("whiteBagB", whiteBagBFile);
         whiteBagC = new Bags("whiteBagC", whiteBagCFile);
         // for the black bags, the bags are given the pebbles with the weights
-        createBlackBags(noOfPlayersInput, blackBagX, blackBagY, blackBagX);
+        createBlackBags(noOfPlayers, blackBagX, blackBagY, blackBagX);
         // end of setup
 
     }
@@ -202,7 +202,8 @@ public class PebbleGame {
      * The type Player.
      */
     class Player extends Thread  {
-        //TODO make the action listener work
+        //TODO: try catch blocks for all files
+
         public String name;
         public ArrayList<Integer> currentHand = new ArrayList<Integer>();
         public String lastPickUp;
@@ -243,23 +244,29 @@ public class PebbleGame {
             do {
                 turn();
                 if (getHandSum() == 100 && getCurrentHand().size() == 10){
-                    playerWon(this.getPlayersName()));
+                    playerWon(this.getPlayersName());
                     this.winner = true;
                 }
                 try {
                     wait();
-                } catch (Exception e) {
+                } catch (Exception e){
 
                 }
                 if(scan.nextLine().equals("E")){
                     ENotInput = false;
                 }
-                //TODO need to notify next player that they can now start their turn
+                try {
+                    //lets the other threads know its their turn
+                    notifyAll();
+                } catch (Exception e){
+
+                }
+
             } while(ENotInput || winner == true);
 
         }
 
-        synchronized public void turn() {
+         public synchronized void turn() {
 
             discard();
             checkBags(blackBagX,blackBagY,blackBagZ);
@@ -308,7 +315,7 @@ public class PebbleGame {
             }
             whiteBag.addPebble(pebbleWeight);
             whiteBag.updateFileRemove();
-            whiteBag.updateFile(whiteBag.getBagPebble());
+            whiteBag.updateFile(whiteBag.getBagPebbles());
             updateFile(discard, currentHand, pebbleWeight ,whiteBagLetter);
 
         }
