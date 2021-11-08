@@ -1,28 +1,31 @@
-import java.util.Random;
-import java.util.*;
-import java.io.*;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Bags {
-    private String name;
     public ArrayList<Integer> bagPebbles = new ArrayList<Integer>();
+    private String name;
     private File fileName;
 
     /**
-     *
      * @param name
      * @param fileName
      */
-
-    public Bags(String name, File fileName) {
+     Bags(String name, File fileName) {
         this.name = name;
         this.fileName = fileName;
     }
-    public Bags(){
+
+     Bags() {
 
     }
 
     /**
      * Removes the pebbles
+     *
      * @param index
      */
     public void removePebble(int index) {
@@ -31,6 +34,7 @@ public class Bags {
 
     /**
      * Adds the pebbles
+     *
      * @param weight
      */
     public void addPebble(Integer weight) {
@@ -39,6 +43,7 @@ public class Bags {
 
     /**
      * Check to see if the array list containing the current pebbles is empty
+     *
      * @return
      */
     public boolean isEmpty() {
@@ -51,6 +56,7 @@ public class Bags {
 
     /**
      * Delete the contents of the file and rewrites the new array list of the pebbles
+     *
      * @param list
      */
     public void updateFile(ArrayList<Integer> list) throws IOException {
@@ -62,24 +68,22 @@ public class Bags {
             BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName));
             buffer.write(list.toString().replaceAll("[\\[\\]]", "")); //adding arraylist to file
             buffer.close();
-        }
-        catch( IOException e){
+        } catch (IOException e) {
             System.out.println("Unable to write to bag file.");
         }
     }
 
-     public void updateFileRemove() throws IOException {
-         try {
-             BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName, false));
-             writer.close();
-         } catch (IOException e) {
-             System.out.println("Unable to remove contents from bag file.");
-         }
-     }
+    public void updateFileRemove() throws IOException {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName, false));
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Unable to remove contents from bag file.");
+        }
+    }
 
 
     /**
-     *
      * @return
      */
     public ArrayList<Integer> getBagPebbles() {
