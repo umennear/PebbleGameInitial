@@ -1,12 +1,9 @@
 import java.util.*;
 import java.io.*;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.*;
 import java.lang.*;
 
-public class GameTest{
+public class PebbleGameTest{
     @Before
     public void setUp(){
         File file = new File("");
@@ -75,10 +72,12 @@ public class GameTest{
     public void TestGetName(){
         assert(player1.getName() == "Player 1");
     }
-    @Test void TestGetCurrentHand(int[] expectedHand){
+    @Test
+    void TestGetCurrentHand(int[] expectedHand){
         assert(player1.getCurrentHand() == expectedHand);
     }
-    @Test void TestHandSum(int expected){
+    @Test
+    void TestHandSum(int expected){
         assert(player1.handSum() == expected );
     }
     @Test
@@ -111,7 +110,8 @@ public class GameTest{
 
     }
     @Test
-    public void TestCheckBags(){
+    public void TestCheckBags(Bags bag1){
+        checkBags(bag1);
 
     }
 

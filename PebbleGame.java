@@ -15,13 +15,13 @@ public class PebbleGame {
      * @param bag3
      */
 
-    static Bags blackBagX;
-    static Bags blackBagY;
-    static Bags blackBagZ;
-    static Bags whiteBagA;
-    static Bags whiteBagB;
-    static Bags whiteBagC;
-    public int noOfPlayers;
+    static volatile Bags blackBagX;
+    static volatile Bags blackBagY;
+    static volatile Bags blackBagZ;
+    static volatile Bags whiteBagA;
+    static volatile Bags whiteBagB;
+    static volatile Bags whiteBagC;
+    public volatile int noOfPlayers;
 
     private static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) { // method to give the black bags values at beginning of the game
         int numberOfPebbles = numberOfPlayers * 11; // as in spec
