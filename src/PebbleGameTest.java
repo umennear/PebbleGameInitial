@@ -1,8 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PebbleGameTest {
+    public PebbleGame game = new PebbleGame();
     @Before
     public void setUp() {
         File file = new File("");
@@ -18,14 +16,7 @@ public class PebbleGameTest {
         }catch(FileNotFoundException e){
             System.out.println("File does not exist");
         }
-        PebbleGame game = new PebbleGame();
         String data = "2,3,4,5,6,7,8,9,10";
-        File creationBlackBagXFile = new File("testBlackBagX.csv"); // the creation versions will be used to test our game set up with empty bags
-        File creationBlackBagYFile = new File("testBlackBagY.csv");// this will allow us to add in new pebbles and check that the code is working correctly with the base case
-        File creationBlackBagZFile = new File("testBlackBagZ.csv");
-        Bags creationBlackBagX = new Bags("blackBagX", creationBlackBagXFile); // initialising the bags to create the base objects
-        Bags creationBlackBagY = new Bags("blackBagY", creationBlackBagYFile);
-        Bags creationBlackBagZ = new Bags("blackBagZ", creationBlackBagZFile);
         File blackBagXFile = new File("example_file_1.csv");
         File blackBagYFile = new File("example_file_2.csv");
         File blackBagZFile = new File("example_file_3.csv");
@@ -33,7 +24,6 @@ public class PebbleGameTest {
         Bags blackBagY = new Bags("blackBagY", blackBagYFile);
         Bags blackBagZ = new Bags("blackBagZ", blackBagZFile);
         int noOfPlayers = 2;
-
         PebbleGame.Player player = new PebbleGame.Player("Player 1");
         
     }

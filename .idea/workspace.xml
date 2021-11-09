@@ -4,39 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Final debugging and testing using the generated files">
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame$Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagB.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagA.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagB.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bags.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bags.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame$Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WhiteBagA.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WhiteBagB.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WhiteBagC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player2.txt" beforeDir="false" />
-    </list>
-    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins">
+    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Writing to file, cleaning up code and testing">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PebbleGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PebbleGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PebbleGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGameTest.java" afterDir="false" />
     </list>
+    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,33 +35,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/PebbleGame.java">
-      <ranges>
-        <range start1="46" end1="47" start2="46" end2="47" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="48" end1="49" start2="48" end2="49" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="50" end1="51" start2="50" end2="51" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="287" end1="312" start2="287" end2="287" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="314" end1="316" start2="289" end2="290" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="317" end1="317" start2="291" end2="292" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="318" end1="318" start2="293" end2="316" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="323" end1="325" start2="321" end2="321" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="329" end1="336" start2="325" end2="326" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="348" end1="349" start2="338" end2="339" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="351" end1="352" start2="341" end2="341" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="354" end1="355" start2="343" end2="343" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="357" end1="358" start2="345" end2="345" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="359" end1="360" start2="346" end2="346" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="361" end1="362" start2="347" end2="347" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="363" end1="364" start2="348" end2="349" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="386" end1="387" start2="371" end2="372" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="412" end1="413" start2="397" end2="397" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="414" end1="415" start2="398" end2="398" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="501" end1="502" start2="484" end2="485" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="546" end1="547" start2="529" end2="530" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1zzcJhP7bQZyjksq4UJYX4SIqCN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -120,7 +69,7 @@
       <recent name="PebbleGame" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PebbleGame">
+  <component name="RunManager" selected="JUnit.PebbleGameTest">
     <configuration name="PebbleGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PebbleGame" />
       <module name="PebbleGame" />
@@ -157,22 +106,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PebbleGameTest.TestReadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PebbleGame" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PebbleGameTest" />
-      <option name="METHOD_NAME" value="TestReadFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PebbleGameTest" />
         <item itemvalue="Application.PebbleGame" />
         <item itemvalue="JUnit.PebbleGame in PebbleGame" />
-        <item itemvalue="JUnit.PebbleGameTest.TestReadFile" />
-        <item itemvalue="JUnit.PebbleGameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -255,35 +193,7 @@
       <option name="project" value="LOCAL" />
       <updated>1636402774498</updated>
     </task>
-    <task id="LOCAL-00011" summary="Final debugging and testing using the generated files">
-      <created>1636416397096</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1636416397096</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Final debugging and testing using the generated files">
-      <created>1636475459199</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1636475459199</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Changes by katiehopkins">
-      <created>1636475471656</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1636475471656</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Final debugging and testing using the generated files">
-      <created>1636475486453</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1636475486453</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -315,13 +225,17 @@
     <MESSAGE value="28/10/2021 15:55" />
     <MESSAGE value="Adding flowchart to report" />
     <MESSAGE value="Writing to files, cleaning up code and testing" />
-    <MESSAGE value="Writing to file, cleaning up code and testing" />
     <MESSAGE value="Changes by katiehopkins" />
-    <MESSAGE value="Final debugging and testing using the generated files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final debugging and testing using the generated files" />
+    <MESSAGE value="Writing to file, cleaning up code and testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Writing to file, cleaning up code and testing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PebbleGame$PebbleGameTest.ic" NAME="PebbleGameTest Coverage Results" MODIFIED="1636491496987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>.*</FILTER>
+    </SUITE>
   </component>
 </project>
