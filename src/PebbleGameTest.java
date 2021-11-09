@@ -5,9 +5,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import org.junit.experimental.runners.Enclosed;
+import org.junit.runner.RunWith;
 
+
+@RunWith(Enclosed.class)
 public class PebbleGameTest {
     public PebbleGame game = new PebbleGame();
+
     @Before
     public void setUp() {
         File file = new File("");
@@ -55,8 +60,6 @@ public class PebbleGameTest {
         assert (game.readFile(blackXFile).length() == 22);
         assert (game.readFile(blackYFile).length() == 22);
         assert (game.readFile(blackZFile).length() == 22);
-
-
     }
 
     @Test
@@ -156,6 +159,7 @@ public class PebbleGameTest {
 
         return noOfPlayersInput;
     }
+
 
     public File editedVersionCheckFileInput(String input) {
         boolean fileVarificationSuccessful = false;
