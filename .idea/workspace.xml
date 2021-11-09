@@ -5,30 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Final debugging and testing using the generated files">
-      <change afterPath="$PROJECT_DIR$/src/WhiteBagA.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WhiteBagB.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WhiteBagC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame$Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagB.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagB.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagC.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bags.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BagsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BagsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame$Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bags.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame$Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WhiteBagA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WhiteBagB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WhiteBagC.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/player1.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/player2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player3.txt" beforeDir="false" />
     </list>
     <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bags.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.java" afterDir="false" />
     </list>
@@ -58,63 +63,27 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/PebbleGame.java">
       <ranges>
-        <range start1="6" end1="6" start2="6" end2="7" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="29" end1="29" start2="30" end2="34" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="30" end1="31" start2="35" end2="44" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="50" end1="51" start2="63" end2="64" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="55" end1="55" start2="68" end2="69" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="123" end1="124" start2="137" end2="138" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="129" end1="132" start2="143" end2="146" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="147" end1="148" start2="161" end2="161" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="149" end1="150" start2="162" end2="163" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="155" end1="156" start2="168" end2="171" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="204" end1="204" start2="219" end2="221" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="235" end1="244" start2="252" end2="252" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="250" end1="256" start2="258" end2="265" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="262" end1="263" start2="271" end2="272" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="272" end1="296" start2="281" end2="310" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="297" end1="298" start2="311" end2="311" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="301" end1="301" start2="314" end2="316" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="308" end1="308" start2="323" end2="326" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="310" end1="311" start2="328" end2="336" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="313" end1="313" start2="338" end2="339" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="314" end1="315" start2="340" end2="345" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="320" end1="321" start2="350" end2="358" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="322" end1="322" start2="359" end2="360" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="323" end1="323" start2="361" end2="362" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="324" end1="324" start2="363" end2="364" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="338" end1="342" start2="378" end2="382" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="343" end1="344" start2="383" end2="383" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="370" end1="371" start2="409" end2="416" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="381" end1="381" start2="426" end2="430" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="390" end1="390" start2="439" end2="442" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="398" end1="398" start2="450" end2="453" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="409" end1="411" start2="464" end2="466" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="414" end1="415" start2="469" end2="470" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="417" end1="418" start2="472" end2="473" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="425" end1="427" start2="480" end2="482" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="430" end1="431" start2="485" end2="486" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="433" end1="434" start2="488" end2="489" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="438" end1="443" start2="493" end2="494" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="444" end1="444" start2="495" end2="496" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="448" end1="448" start2="500" end2="501" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="449" end1="449" start2="502" end2="506" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="487" end1="488" start2="544" end2="545" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="489" end1="490" start2="546" end2="547" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="491" end1="491" start2="548" end2="549" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="495" end1="496" start2="553" end2="554" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Bags.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="7" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
-        <range start1="8" end1="9" start2="9" end2="10" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="16" end1="17" start2="17" end2="18" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="21" end1="22" start2="22" end2="23" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="28" end1="29" start2="29" end2="30" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="30" end1="31" start2="31" end2="34" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="32" end1="32" start2="35" end2="36" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
-        <range start1="33" end1="33" start2="37" end2="40" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="46" end1="47" start2="46" end2="47" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="48" end1="49" start2="48" end2="49" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="50" end1="51" start2="50" end2="51" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="287" end1="312" start2="287" end2="287" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="314" end1="316" start2="289" end2="290" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="317" end1="317" start2="291" end2="292" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="318" end1="318" start2="293" end2="316" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="323" end1="325" start2="321" end2="321" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="329" end1="336" start2="325" end2="326" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="348" end1="349" start2="338" end2="339" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="351" end1="352" start2="341" end2="341" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="354" end1="355" start2="343" end2="343" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="357" end1="358" start2="345" end2="345" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="359" end1="360" start2="346" end2="346" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="361" end1="362" start2="347" end2="347" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="363" end1="364" start2="348" end2="349" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="386" end1="387" start2="371" end2="372" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="412" end1="413" start2="397" end2="397" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="414" end1="415" start2="398" end2="398" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
+        <range start1="501" end1="502" start2="484" end2="485" changelist="2dcd8625-54f3-4193-bcb7-b59b052dd587" />
+        <range start1="546" end1="547" start2="529" end2="530" changelist="79e503ab-fc52-43af-ae30-8907adb0f758" />
       </ranges>
     </file>
   </component>
@@ -200,9 +169,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PebbleGame" />
         <item itemvalue="JUnit.PebbleGame in PebbleGame" />
         <item itemvalue="JUnit.PebbleGameTest.TestReadFile" />
-        <item itemvalue="Application.PebbleGame" />
         <item itemvalue="JUnit.PebbleGameTest" />
       </list>
     </recent_temporary>
@@ -293,7 +262,28 @@
       <option name="project" value="LOCAL" />
       <updated>1636416397096</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Final debugging and testing using the generated files">
+      <created>1636475459199</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1636475459199</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes by katiehopkins">
+      <created>1636475471656</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1636475471656</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Final debugging and testing using the generated files">
+      <created>1636475486453</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1636475486453</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -325,8 +315,8 @@
     <MESSAGE value="28/10/2021 15:55" />
     <MESSAGE value="Adding flowchart to report" />
     <MESSAGE value="Writing to files, cleaning up code and testing" />
-    <MESSAGE value="Changes by katiehopkins" />
     <MESSAGE value="Writing to file, cleaning up code and testing" />
+    <MESSAGE value="Changes by katiehopkins" />
     <MESSAGE value="Final debugging and testing using the generated files" />
     <option name="LAST_COMMIT_MESSAGE" value="Final debugging and testing using the generated files" />
   </component>

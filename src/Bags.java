@@ -68,11 +68,10 @@ public class Bags {
      */
     public void updateFile(CopyOnWriteArrayList<Integer> list) throws IOException {
         // some writer function here
-
-
         try {
 
             BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName));
+
             buffer.write(list.toString().replaceAll("[\\[\\]]", "")); //adding arraylist to file
             buffer.close();
         } catch (IOException e) {

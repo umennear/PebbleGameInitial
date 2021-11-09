@@ -44,11 +44,11 @@ public class PebbleGame {
     public static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) throws IOException { // method to give the black bags values at beginning of the game
         int numberOfPebbles = numberOfPlayers * 11; // as in spec
         for (int i = 0; i < numberOfPebbles; i++) { // gives each bag a pebble for numberOfPebble times with a random int value
-            bag1.addPebble(randomNumGenerator(0, 25));
+            bag1.addPebble(randomNumGenerator(1, 25));
             bag1.updateFile(bag1.getBagPebbles());
-            bag2.addPebble(randomNumGenerator(0, 25));
+            bag2.addPebble(randomNumGenerator(1, 25));
             bag2.updateFile(bag2.getBagPebbles());
-            bag3.addPebble(randomNumGenerator(0, 25));
+            bag3.addPebble(randomNumGenerator(1, 25));
             bag3.updateFile(bag3.getBagPebbles());
 
         }
@@ -289,6 +289,7 @@ public class PebbleGame {
         public synchronized void run() {
             boolean setUp = false;
             do {
+
                 try {
                     if(!setUp){
                         Bags bag = new Bags();
@@ -481,7 +482,7 @@ public class PebbleGame {
                 //deletes contents of bag file and replaces it with the new contents
                 //bag.updateFileRemove();
                 try{
-                bag.updateFile(bag.getBagPebbles());
+                    bag.updateFile(bag.getBagPebbles());
                 }catch(Throwable e){
                     e.printStackTrace();
                     System.out.println("Problem updating black bag file");
