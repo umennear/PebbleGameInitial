@@ -3,10 +3,10 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Bags {
-    public ArrayList<Integer> bagPebbles = new ArrayList<Integer>();
+    public CopyOnWriteArrayList<Integer> bagPebbles = new CopyOnWriteArrayList<Integer>();
     private String name;
     private File fileName;
 
@@ -59,7 +59,7 @@ public class Bags {
      *
      * @param list
      */
-    public void updateFile(ArrayList<Integer> list) throws IOException {
+    public void updateFile(CopyOnWriteArrayList<Integer> list) throws IOException {
         // some writer function here
 
 
@@ -86,7 +86,7 @@ public class Bags {
     /**
      * @return
      */
-    public ArrayList<Integer> getBagPebbles() {
+    public CopyOnWriteArrayList<Integer> getBagPebbles() {
         return bagPebbles;
     }
 

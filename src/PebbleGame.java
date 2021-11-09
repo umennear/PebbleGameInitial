@@ -3,6 +3,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+
 
 /**
  * The type Pebble game.
@@ -36,11 +39,6 @@ public class PebbleGame {
             bag3.updateFile(bag3.getBagPebbles());
 
         }
-        System.out.println(bag1.getBagPebbles());
-        System.out.println(bag2.getBagPebbles());
-        System.out.println(bag3.getBagPebbles());
-
-
     }
 
     /**
@@ -203,7 +201,7 @@ public class PebbleGame {
      * @param PlayerName the player name
      */
     public static void playerWon(String PlayerName) {
-        System.out.println("Congratulations to " + PlayerName + ", you have won the game.\nThe game is now over, Goodbye");
+        System.out.println("Congratulations to " + PlayerName + ", you have won the game.\nThe game is now over, Goodbye!");
     }
 
     /**
@@ -213,11 +211,23 @@ public class PebbleGame {
      */
     public static void main(String args[]) {
 
-        try {
-            gameMain();
-        } catch (IOException e) {
+        boolean equalsE =false;
+        do{
 
-        }
+            try {
+                gameMain();
+            } catch (IOException e) {
+
+            }
+            Scanner scan = new Scanner(System.in);
+            String input = scan.nextLine();
+            if(input.equals("E")){
+                equalsE = true;
+            }
+
+        }while (equalsE == false);
+
+
 
 
 
@@ -236,7 +246,7 @@ public class PebbleGame {
      * The type Player.
      */
     public static class Player extends Thread {
-        //TODO: try catch blocks for all files
+
 
         public String name;
         public ArrayList<Integer> currentHand = new ArrayList<Integer>();
@@ -260,7 +270,7 @@ public class PebbleGame {
                 } else {
                     System.out.println("File already exists.");
                 }
-                for (int i = 0; i < 10; i++) {
+                do {
                         Bags bag = new Bags();
                         int newBag = randomNumGenerator(0, 3);
                         if (newBag == 1) {
@@ -270,16 +280,16 @@ public class PebbleGame {
                         } else if (newBag == 3) {
                             bag = blackBagZ;
                         }
-                        ArrayList<Integer> pebbles = bag.getBagPebbles();
-                        System.out.println(pebbles);
+                        CopyOnWriteArrayList<Integer> pebbles = bag.getBagPebbles();
                         int pebblesize = pebbles.size();
-                        System.out.println(pebblesize);
-                        int pebbleIndex = randomNumGenerator(0, pebblesize - 1);
-                        int pick = pebbles.get(1);
-                        bag.removePebble(pebbleIndex);
-                        System.out.println(bag.getBagPebbles());
-                        currentHand.add(pick);
-                }
+                        if (pebblesize > 10){
+                            for (int i =0; i<10;i++){
+                                int pick = pebbles.get(i);
+                                bag.removePebble(i);
+                                currentHand.add(pick);
+                            }
+                        }
+                }while (currentHand.size() < 10);
             } catch (IOException e) {
                 System.out.println("An error occurred.");
                 e.printStackTrace();
@@ -289,34 +299,20 @@ public class PebbleGame {
 
 
         public synchronized void run() {
-            boolean ENotInput = true;
-            Scanner scan = new Scanner(System.in);
             do {
                 try {
                     turn();
-                } catch (IOException e) {
+                } catch (Throwable e) {
+                    e.printStackTrace();
                     System.out.println("Could not execute players turns.");
                 }
                 if (getHandSum() == 100 && getCurrentHand().size() == 10) {
                     playerWon(this.getPlayersName());
                     this.winner = true;
                 }
-                try {
-                    wait();
-                } catch (Exception e) {
+                Thread.yield();
 
-                }
-                if (scan.nextLine().equals("E")) {
-                    ENotInput = false;
-                }
-                try {
-                    //lets the other threads know its their turn
-                    notifyAll();
-                } catch (Exception e) {
-
-                }
-
-            } while (ENotInput || winner == true);
+            } while (winner == false);
 
         }
 
@@ -325,6 +321,7 @@ public class PebbleGame {
                 discard();
                 checkBags(blackBagX, blackBagY, blackBagZ);
                 pickUp();
+                checkBags(blackBagX, blackBagY, blackBagZ);
             } catch (IOException e) {
                 System.out.println("Cannot write to file.");
             }
@@ -370,8 +367,8 @@ public class PebbleGame {
                 whiteBagLetter = "C";
             }
             whiteBag.addPebble(pebbleWeight);
-            whiteBag.updateFileRemove();
-            whiteBag.updateFile(whiteBag.getBagPebbles());
+            //whiteBag.updateFileRemove();
+            //whiteBag.updateFile(whiteBag.getBagPebbles());
             updateFile(discard, currentHand, pebbleWeight, whiteBagLetter);
 
         }
@@ -380,7 +377,7 @@ public class PebbleGame {
             //arguments must be in alphabetical order to be paired correctly
             if (bag1.isEmpty()) {
                 //gets the arraylist of the corresponding white bag
-                ArrayList<Integer> pebblesA = whiteBagA.getBagPebbles();
+                CopyOnWriteArrayList<Integer> pebblesA = whiteBagA.getBagPebbles();
                 //adds it to the black bag
                 blackBagX.updateFile(pebblesA);
                 //removes those pebbles from the white bag
@@ -389,7 +386,7 @@ public class PebbleGame {
             }
             if (bag2.isEmpty()) {
                 //gets the arraylist of the corresponding white bag
-                ArrayList<Integer> pebblesB = whiteBagB.getBagPebbles();
+                CopyOnWriteArrayList<Integer> pebblesB = whiteBagB.getBagPebbles();
                 //adds it to the black bag
                 blackBagY.updateFile(pebblesB);
                 //removes those pebbles from the white bag
@@ -397,7 +394,7 @@ public class PebbleGame {
             }
             if (bag3.isEmpty()) {
                 //gets the arraylist of the corresponding white bag
-                ArrayList<Integer> pebblesC = whiteBagC.getBagPebbles();
+                CopyOnWriteArrayList<Integer> pebblesC = whiteBagC.getBagPebbles();
                 //adds it to the black bag
                 blackBagZ.updateFile(pebblesC);
                 //removes those pebbles from the white bag
@@ -409,8 +406,8 @@ public class PebbleGame {
         synchronized public void pickUp() throws IOException {
             discard = false;
             Bags bag = new Bags();
-            int newBag = randomNumGenerator(0, 3);
-
+            Random rand = new Random();
+            int newBag = rand.nextInt(3);
             if (newBag == 1) {
                 bag = blackBagX;
                 this.lastPickUp = "X";
@@ -422,19 +419,34 @@ public class PebbleGame {
                 bag = blackBagZ;
                 this.lastPickUp = "Z";
             }
-            ArrayList<Integer> pebbles = bag.getBagPebbles();
+            CopyOnWriteArrayList<Integer> pebbles = bag.getBagPebbles();
             int pebblesize = pebbles.size();
-            System.out.println(pebblesize);
-            int pebbleIndex = randomNumGenerator(0, pebblesize-1);
-            int pick = pebbles.get(pebbleIndex);
-            bag.removePebble(pebbleIndex);
-            currentHand.add(pick);
-            //writes to players log
-            updateFile(discard, currentHand, pick, lastPickUp);
-            //deletes contents of bag file and replaces it with the new contents
-            bag.updateFileRemove();
-            bag.updateFile(bag.getBagPebbles());
+            do {
+                checkBags(blackBagX, blackBagY, blackBagZ);
+                 newBag = rand.nextInt(3);
+                if (newBag == 1) {
+                    bag = blackBagX;
+                    this.lastPickUp = "X";
 
+                } else if (newBag == 2) {
+                    bag = blackBagY;
+                    this.lastPickUp = "Y";
+                } else if (newBag == 3) {
+                    bag = blackBagZ;
+                    this.lastPickUp = "Z";
+                }
+            } while (pebblesize <= 0);
+             pebbles = bag.getBagPebbles();
+             pebblesize = pebbles.size();
+                int pebbleIndex = rand.nextInt(pebblesize);
+                int pick = pebbles.get(pebbleIndex - 1);
+                bag.removePebble(pebbleIndex);
+                currentHand.add(pick);
+                //writes to players log
+                updateFile(discard, currentHand, pick, lastPickUp);
+                //deletes contents of bag file and replaces it with the new contents
+                //bag.updateFileRemove();
+                bag.updateFile(bag.getBagPebbles());
 
         }
 
@@ -475,11 +487,11 @@ public class PebbleGame {
                 } else {
                     log += this.getPlayersName() + " has drawn a " + data + " pebble from bag " + bag;
                 }
-                log += "\n" + this.getPlayersName() + " hand is " + list.toString().replaceAll("[\\[\\]]", "") + "\n";
-                BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName));
-                buffer.write(log);
+                log += "\n" + this.getPlayersName() + " hand is " + list.toString().replaceAll("[\\[\\]]", "") ;
+                BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName, true));
+                buffer.append(log);
+                buffer.newLine();
                 buffer.close();
-                System.out.println(log);
             } catch (IOException e) {
                 System.out.println("Something has gone really and truly wrong :( ");
             }

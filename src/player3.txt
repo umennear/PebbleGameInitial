@@ -1,0 +1,48 @@
+player3 has discarded 12 pebble to bag A
+player3 hand is 25, 11, 7, 18, 7, 20, 11, 9, 5
+player3 has discarded 0 pebble to bag B
+player3 hand is 21, 18, 16, 18, 21, 6, 4, 10, 25
+player3 has drawn a 16 pebble from bag Y
+player3 hand is 21, 18, 16, 18, 21, 6, 4, 10, 25, 16
+player3 has discarded 18 pebble to bag B
+player3 hand is 21, 16, 18, 21, 6, 4, 10, 25, 16
+player3 has drawn a 18 pebble from bag Y
+player3 hand is 21, 16, 18, 21, 6, 4, 10, 25, 16, 18
+player3 has discarded 10 pebble to bag B
+player3 hand is 21, 16, 18, 21, 6, 4, 25, 16, 18
+player3 has drawn a 10 pebble from bag X
+player3 hand is 21, 16, 18, 21, 6, 4, 25, 16, 18, 10
+player3 has discarded 16 pebble to bag A
+player3 hand is 21, 16, 18, 21, 6, 4, 25, 18, 10
+player3 has drawn a 25 pebble from bag X
+player3 hand is 21, 16, 18, 21, 6, 4, 25, 18, 10, 25
+player3 has discarded 6 pebble to bag A
+player3 hand is 21, 16, 18, 21, 4, 25, 18, 10, 25
+player3 has discarded 21 pebble to bag C
+player3 hand is 11, 4, 12, 9, 18, 15, 22, 9, 1
+player3 has drawn a 12 pebble from bag X
+player3 hand is 11, 4, 12, 9, 18, 15, 22, 9, 1, 12
+player3 has discarded 15 pebble to bag A
+player3 hand is 11, 4, 12, 9, 18, 22, 9, 1, 12
+player3 has discarded 11 pebble to bag B
+player3 hand is 8, 1, 20, 23, 21, 7, 14, 18, 9
+player3 has discarded 6 pebble to bag B
+player3 hand is 23, 23, 0, 13, 3, 11, 13, 23, 0
+player3 has discarded 21 pebble to bag A
+player3 hand is 22, 18, 0, 22, 15, 20, 15, 14, 9
+player3 has discarded 7 pebble to bag A
+player3 hand is 0, 9, 17, 7, 21, 2, 15, 10, 14
+player3 has drawn a 18 pebble from bag Y
+player3 hand is 0, 9, 17, 7, 21, 2, 15, 10, 14, 18
+player3 has discarded 0 pebble to bag B
+player3 hand is 9, 17, 7, 21, 2, 15, 10, 14, 18
+player3 has drawn a 10 pebble from bag X
+player3 hand is 9, 17, 7, 21, 2, 15, 10, 14, 18, 10
+player3 has discarded 10 pebble to bag A
+player3 hand is 9, 17, 7, 21, 2, 15, 14, 18, 10
+player3 has drawn a 12 pebble from bag Y
+player3 hand is 9, 17, 7, 21, 2, 15, 14, 18, 10, 12
+player3 has discarded 2 pebble to bag B
+player3 hand is 9, 17, 7, 21, 15, 14, 18, 10, 12
+player3 has discarded 6 pebble to bag C
+player3 hand is 9, 7, 20, 1, 1, 12, 14, 18, 1

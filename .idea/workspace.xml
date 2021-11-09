@@ -5,25 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Writing to file, cleaning up code and testing">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BagsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PebbleGameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PebbleGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PebbleGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bags.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Bags.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BagsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ECM2414_Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/res/ECM2414_Report.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PebbleGame$Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PebbleGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PebbleGameTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$M2414_Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/res/~$M2414_Report.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PebbleGame/bin/3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bags.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bags.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PebbleGame$Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame$Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PebbleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PebbleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/player1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/player2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/player3.txt" afterDir="false" />
     </list>
     <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +78,7 @@
       <recent name="PebbleGame" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PebbleGame in PebbleGame">
+  <component name="RunManager" selected="Application.PebbleGame">
     <configuration name="PebbleGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PebbleGame" />
       <module name="PebbleGame" />
@@ -121,9 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PebbleGame" />
         <item itemvalue="JUnit.PebbleGame in PebbleGame" />
         <item itemvalue="JUnit.PebbleGameTest" />
-        <item itemvalue="Application.PebbleGame" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636391171581</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Writing to file, cleaning up code and testing">
+      <created>1636402766694</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636402766694</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Writing to file, cleaning up code and testing">
+      <created>1636402774498</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1636402774498</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
