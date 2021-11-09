@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.*;
 
 public class Bags {
     public volatile CopyOnWriteArrayList<Integer> bagPebbles = new CopyOnWriteArrayList<Integer>();
@@ -33,6 +34,9 @@ public class Bags {
         int index =rand.nextInt(this.bagPebbles.size());
         bagPebbles.remove(index);
         return index;
+    }
+    public void removePebble(int index){
+        bagPebbles.remove(index);
     }
 
     /**

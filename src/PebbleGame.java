@@ -66,6 +66,7 @@ public class PebbleGame {
         int randomNum = rand.nextInt((max - min) + 1) + min;
         return randomNum;
     }
+    
 
     /**
      * Check file input file.
@@ -140,9 +141,9 @@ public class PebbleGame {
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the pebble game!! \nYou will be asked to enter the number of players.\nand then for the location of three files in turn containing comma seperated integer values the pebble weights.\nThe integer values must strictly positive. \nThe game will then be simulated, and output written to files in this directory.\n"); // opening remarks
         int noOfPlayers = checkIntInput(scan);
-        File blackBagXFile = checkFileInput(scan, 1);
-        File blackBagYFile = checkFileInput(scan, 2);
-        File blackBagZFile = checkFileInput(scan, 3);
+        File blackBagXFile = checkFileInput(scan, 0);
+        File blackBagYFile = checkFileInput(scan, 1);
+        File blackBagZFile = checkFileInput(scan, 2);
         //creates the bags files after they have been checked
         // add in try catch for createFile();
         File whiteBagAFile = new File("WhiteBagA.csv");
@@ -320,11 +321,22 @@ public class PebbleGame {
                     e.printStackTrace();
                     System.out.println("Could not execute players turns.");
                 }
+                markerCounter++;
+                System.out.println("Marker counter is " + markerCounter);
+
                 if (getHandSum() == 100 && getCurrentHand().size() == 10) {
                     playerWon(this.getPlayersName());
-                    this.winner = true;
+                    PebbleGame.setWinnerTrue();
+                    //might have to rewrite how the flag works so there is a method called outide the player class that interrups the threads 
+                    // doesnt need to interupt just needs to set all the winner to true, that will end the other threads like it did with player1 ok perfect 
+                    //can do a set winner method and call it for all players in playerWon
+                    // just have a public variable for the winner in the pebble game and then have the inner class access that winner, but i was getting errors when i tried to access the winner from the inner class, so need a getter
+                    //cool seems achievable
+                    // here it needs to say that winner is false for all instance of the player class not just this.
+                              
                 }
                 Thread.yield();
+
 
             } while (!PebbleGame.getIfWinner());{
 
@@ -412,6 +424,10 @@ public class PebbleGame {
                 //gets the arraylist of the corresponding white bag
                 CopyOnWriteArrayList<Integer> pebblesA = whiteBagA.getBagPebbles();
                 //adds it to the black bag
+                for(int i = 0; i < pebblesA.size() ; i++){
+                    blackBagX.addPebble(pebblesA.get(i));
+                }
+
                 blackBagX.updateFile(pebblesA);
                 //removes those pebbles from the white bag
                 whiteBagA.updateFileRemove();
@@ -421,6 +437,9 @@ public class PebbleGame {
                 //gets the arraylist of the corresponding white bag
                 CopyOnWriteArrayList<Integer> pebblesB = whiteBagB.getBagPebbles();
                 //adds it to the black bag
+                for(int i = 0; i < pebblesB.size() ; i++){
+                    blackBagY.addPebble(pebblesB.get(i));
+                }
                 blackBagY.updateFile(pebblesB);
                 //removes those pebbles from the white bag
                 whiteBagB.updateFileRemove();
@@ -429,6 +448,9 @@ public class PebbleGame {
                 //gets the arraylist of the corresponding white bag
                 CopyOnWriteArrayList<Integer> pebblesC = whiteBagC.getBagPebbles();
                 //adds it to the black bag
+                for(int i = 0; i < pebblesC.size() ; i++){
+                    blackBagZ.addPebble(pebblesC.get(i));
+                }
                 blackBagZ.updateFile(pebblesC);
                 //removes those pebbles from the white bag
                 whiteBagC.updateFileRemove();
@@ -440,15 +462,15 @@ public class PebbleGame {
             discard = false;
             Bags bag = new Bags();
             Random rand = new Random();
-            int newBag = rand.nextInt(3);
-            if (newBag == 1) {
+            int newBag = rand.nextInt(2);
+            if (newBag == 0) {
                 bag = blackBagX;
                 this.lastPickUp = "X";
 
-            } else if (newBag == 2) {
+            } else if (newBag == 1) {
                 bag = blackBagY;
                 this.lastPickUp = "Y";
-            } else if (newBag == 3) {
+            } else if (newBag == 2) {
                 bag = blackBagZ;
                 this.lastPickUp = "Z";
             }
@@ -456,15 +478,15 @@ public class PebbleGame {
             int pebblesize = pebbles.size();
             do {
                 checkBags(blackBagX, blackBagY, blackBagZ);
-                 newBag = rand.nextInt(3);
-                if (newBag == 1) {
+                 newBag = rand.nextInt(2);
+                if (newBag == 0) {
                     bag = blackBagX;
                     this.lastPickUp = "X";
 
-                } else if (newBag == 2) {
+                } else if (newBag == 1) {
                     bag = blackBagY;
                     this.lastPickUp = "Y";
-                } else if (newBag == 3) {
+                } else if (newBag == 2) {
                     bag = blackBagZ;
                     this.lastPickUp = "Z";
                 }
