@@ -4,15 +4,107 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Writing to file, cleaning up code and testing">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Final debugging and testing using the generated files">
       <change beforePath="$PROJECT_DIR$/.idea/PebbleGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PebbleGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/PebbleGame.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/intellij-javadocs-4.0.1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/libraries/junit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2021,_10_22_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_11_35_am_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_16_29_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_16_35_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_5_38_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_5_40_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021__11_35_am__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021__16_29__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021__16_35__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021__5_38_pm__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2021__5_40_pm__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021,_12_53_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2021__12_53__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2021,_11_40_am_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2021,_14_39_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2021,_4_49_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2021__11_40_am__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2021__14_39__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/shelf/Uncommitted_changes_before_Update_at_08_11_2021__4_49_pm__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/Bags.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/BagsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/ECM2414_Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame$Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGame.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/PebbleGameTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/TestRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/WhiteBagC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/example_file_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/example_file_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/example_file_3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/intellij-javadocs-4.0.1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/libraries/junit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/player1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/player2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/res/ECM2414_Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/res/~$M2414_Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_02_11_2021,_10_22_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_11_35_am_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_16_29_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_16_35_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_5_38_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021,_5_40_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021__11_35_am__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021__16_29__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021__16_35__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021__5_38_pm__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_04_11_2021__5_40_pm__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_07_11_2021,_12_53_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_07_11_2021__12_53__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_08_11_2021,_11_40_am_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_08_11_2021,_14_39_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_08_11_2021,_4_49_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_08_11_2021__11_40_am__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_08_11_2021__14_39__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/shelf/Uncommitted_changes_before_Update_at_08_11_2021__4_49_pm__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagA.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagB.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/WhiteBagC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/player1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/src/player2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/bin/~$M2414_Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/3.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PebbleGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PebbleGameTest.java" afterDir="false" />
     </list>
-    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins" />
+    <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,20 +169,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PebbleGame in PebbleGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PebbleGame" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="PebbleGame" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PebbleGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PebbleGame" />
       <extension name="coverage">
@@ -106,11 +184,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PebbleGameTest.TestGetNextPebble" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PebbleGame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PebbleGameTest" />
+      <option name="METHOD_NAME" value="TestGetNextPebble" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PebbleGameTest.TestReadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PebbleGame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PebbleGameTest" />
+      <option name="METHOD_NAME" value="TestReadFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src in PebbleGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PebbleGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="PebbleGame" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PebbleGame" />
+      <item itemvalue="JUnit.src in PebbleGame" />
+      <item itemvalue="JUnit.PebbleGameTest" />
+      <item itemvalue="JUnit.PebbleGameTest.TestGetNextPebble" />
+      <item itemvalue="JUnit.PebbleGameTest.TestReadFile" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PebbleGameTest" />
+        <item itemvalue="JUnit.PebbleGameTest.TestGetNextPebble" />
+        <item itemvalue="JUnit.PebbleGameTest.TestReadFile" />
         <item itemvalue="Application.PebbleGame" />
-        <item itemvalue="JUnit.PebbleGame in PebbleGame" />
+        <item itemvalue="JUnit.src in PebbleGame" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +317,35 @@
       <option name="project" value="LOCAL" />
       <updated>1636402774498</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Final debugging and testing using the generated files">
+      <created>1636416397096</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636416397096</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Final debugging and testing using the generated files">
+      <created>1636475459199</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1636475459199</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Changes by katiehopkins">
+      <created>1636475471656</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1636475471656</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Final debugging and testing using the generated files">
+      <created>1636475486453</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1636475486453</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -225,17 +377,13 @@
     <MESSAGE value="28/10/2021 15:55" />
     <MESSAGE value="Adding flowchart to report" />
     <MESSAGE value="Writing to files, cleaning up code and testing" />
-    <MESSAGE value="Changes by katiehopkins" />
     <MESSAGE value="Writing to file, cleaning up code and testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Writing to file, cleaning up code and testing" />
+    <MESSAGE value="Changes by katiehopkins" />
+    <MESSAGE value="Final debugging and testing using the generated files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final debugging and testing using the generated files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PebbleGame$PebbleGameTest.ic" NAME="PebbleGameTest Coverage Results" MODIFIED="1636491496987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>.*</FILTER>
-    </SUITE>
   </component>
 </project>
