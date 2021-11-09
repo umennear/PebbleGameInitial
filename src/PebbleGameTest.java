@@ -2,8 +2,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 
+
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,7 +18,7 @@ public class PebbleGameTest {
         }catch(FileNotFoundException e){
             System.out.println("File does not exist");
         }
-        PebbleGame game = new PebbleGame(); //we dont have a constructor for pebble game
+        PebbleGame game = new PebbleGame();
         String data = "2,3,4,5,6,7,8,9,10";
         File creationBlackBagXFile = new File("testBlackBagX.csv"); // the creation versions will be used to test our game set up with empty bags
         File creationBlackBagYFile = new File("testBlackBagY.csv");// this will allow us to add in new pebbles and check that the code is working correctly with the base case
@@ -31,7 +33,8 @@ public class PebbleGameTest {
         Bags blackBagY = new Bags("blackBagY", blackBagYFile);
         Bags blackBagZ = new Bags("blackBagZ", blackBagZFile);
         int noOfPlayers = 2;
-        //PebbleGame.Player player1 = new PebbleGame.Player("Player 1");
+
+        PebbleGame.Player player = new PebbleGame.Player("Player 1");
         
     }
 
@@ -42,37 +45,37 @@ public class PebbleGameTest {
     }
 
     @Test
-    public void TestGetNextPebble(String data) {
-        assert (data.split(",").contains(game.getNextPebble(data)));
+    public void TestGetNextPebble(String data, PebbleGame game) {
+        assert (data.contains(game.getNextPebble(data)));
 
     }
 
     @Test
-    public void TestRandomNumGenerator() { // not very rigorous, however is one of the best ways we can test when deasling with random numbers
+    public void TestRandomNumGenerator(PebbleGame game) { // not very rigorous, however is one of the best ways we can test when deasling with random numbers
 
         for (int i = 0; i < 20; i++) {
-            int number = this.game.RandomNumberGenerator(0, 25);
+            int number = game.randomNumGenerator(0, 25);
             assert (number <= 25 && number >= 0);
         }
     }
 
     @Test
-    public void TestCreateBlackBags(int noOfPlayers, Bags blackX, Bags blackY, Bags blackZ) {
+    public void TestCreateBlackBags(int noOfPlayers, File blackXFile, File blackYFile, File blackZFile, PebbleGame game, Bags blackX, Bags blackY, Bags blackZ) throws IOException {
         game.createBlackBags(noOfPlayers, blackX, blackY, blackZ);
-        assert (game.readFile(blackX).size() == 22);
-        assert (game.readFile(blackY).size() == 22);
-        assert (game.readFile(blackZ).size() == 22);
+        assert (game.readFile(blackXFile).length() == 22);
+        assert (game.readFile(blackYFile).length() == 22);
+        assert (game.readFile(blackZFile).length() == 22);
 
 
     }
 
     @Test
-    public void TestCheckIntInput() {
-        assert (editiedVersionCheckIntInput("5") == 5); //correct data
-        assert (editiedVersionCheckIntInput("-1") == -1); //erronous data
-        assert (editiedVersionCheckIntInput("hello") == -1); // erronous data
-        assert (editiedVersionCheckIntInput("0") == -1); // boundary erronous data
-        assert (editiedVersionCheckIntInput("1") == 1); // boundary correct data
+    public void TestCheckIntInput(Scanner scan) {
+        assert (editiedVersionCheckIntInput("5", scan) == 5); //correct data
+        assert (editiedVersionCheckIntInput("-1", scan) == -1); //erronous data
+        assert (editiedVersionCheckIntInput("hello", scan) == -1); // erronous data
+        assert (editiedVersionCheckIntInput("0", scan) == -1); // boundary erronous data
+        assert (editiedVersionCheckIntInput("1", scan) == 1); // boundary correct data
     }
 
     @Test
@@ -81,20 +84,21 @@ public class PebbleGameTest {
 
     }
 
-    // players tests
+   /**
+    *  // players tests
     @Test
-    public void TestGetName() {
-        assert (player1.getName() == "Player 1");
+    public void TestGetName(PebbleGame.Player player) {
+        assert (player.getName() == "Player 1");
     }
 
     @Test
-    void TestGetCurrentHand(int[] expectedHand) {
-        assert (player1.getCurrentHand() == expectedHand);
+    void TestGetCurrentHand(ArrayList<Integer> expectedHand, PebbleGame.Player player) {
+        assert (player.getCurrentHand() == expectedHand);
     }
 
     @Test
-    void TestHandSum(int expected) {
-        assert (player1.handSum() == expected);
+    void TestHandSum(int expected, PebbleGame game) {
+        assert (game.getHandSum() == expected);
     }
 
     @Test
@@ -103,23 +107,23 @@ public class PebbleGameTest {
     }
 
     @Test
-    public void TestDicard() {
+    public void TestDiscard(PebbleGame.Player player) {
         String[] before = player.getCurrentHand();
         discard();
-        String[] After = player.getCurrentHand();
+        String[] after = player.getCurrentHand();
         assert (before.length == after.length - 1);
     }
 
     @Test
-    public void TestPickUp() {
+    public void TestPickUp(PebbleGame.Player player) {
         String[] before = player.getCurrentHand();
         pickUp();
-        String[] After = player.getCurrentHand();
+        String[] after = player.getCurrentHand();
         assert (before.length == after.length + 1);
     }
 
     @Test
-    public void TestUpdateFile() {
+    public void TestUpdateFile(PebbleGame.Player player) {
 
         pickUp();
         updateFile();
@@ -133,11 +137,11 @@ public class PebbleGameTest {
     @Test
     public void TestCheckBags(Bags bag1) {
         checkBags(bag1);
-
     }
+    */
 
 
-    public int editiedVersionCheckIntInput(String input) { // these are exact replicas of the functions, however they take hard-coded strings instead of inputs, for testing purposes
+    public int editiedVersionCheckIntInput(String input, Scanner scan) { // these are exact replicas of the functions, however they take hard-coded strings instead of inputs, for testing purposes
         boolean validationSuccessful = false;
         int noOfPlayersInput;
         
@@ -181,3 +185,5 @@ public class PebbleGameTest {
 
 
 }
+
+

@@ -3,10 +3,12 @@ import org.junit.*;
 import org.junit.runner.RunWith;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
 
-@RunWith(TestRunner);
+
 public class BagsTest {
 
 
@@ -16,17 +18,24 @@ public class BagsTest {
 
         String blackBag1Name = "example_file_1.csv";
         File blackBag1 = new File(blackBag1Name);
-        Scanner Reader1 = new Scanner(blackBag1);
+        String data = "";
+        try {
+            Scanner Reader1 = new Scanner(blackBag1);
+            data = Reader1.nextLine();
+        }
+        catch(FileNotFoundException e){
+
+        }
         int noOfPlayers = 2;
         //create the bags
         //read the files
-        String data = Reader1.nextLine();
-        List<String> dataList = data.split(",");
-        List<Integer> fileList;
-        for (int i = 0; i > dataList.size(); i++) {
-            fileList.add(dataList[i].toint());
+
+        String[] dataList = data.split(",");
+        ArrayList<Integer> fileList = new ArrayList<Integer>();
+        for (int i = 0; i > dataList.length ; i++) {
+            fileList.add(Integer.valueOf(dataList[i]));
         }
-        Reader1.close();
+
 
 
         //create a list of pebbles from the files etc
@@ -48,7 +57,7 @@ public class BagsTest {
 
     @Test
     public void checkFileFormat(File name) {
-        assert (probeContentType(name) == ".cvs");
+        assert (name.getName().contains(".csv"));
     }
 
     @Test
@@ -67,10 +76,10 @@ public class BagsTest {
 
     }
 
-    @Test
-    public void checkEmpty(File name) {
-        assert (File.length() == 0);
-    }
+    //@Test
+    //public void checkEmpty(File name) {
+    //    assert (name.length == 0);
+   // }
     //    @Test
     //    public void checkFilesNotEqual(String name1, String name2, String name3){
     //        assert(name1 != name2 && name2 !== name3 && name1 != name3);

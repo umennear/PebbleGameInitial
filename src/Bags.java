@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Bags {
-    public CopyOnWriteArrayList<Integer> bagPebbles = new CopyOnWriteArrayList<Integer>();
+    public volatile CopyOnWriteArrayList<Integer> bagPebbles = new CopyOnWriteArrayList<Integer>();
     private String name;
     private File fileName;
 
@@ -14,22 +14,25 @@ public class Bags {
      * @param name
      * @param fileName
      */
-     Bags(String name, File fileName) {
+     public Bags(String name, File fileName) {
         this.name = name;
         this.fileName = fileName;
     }
 
-     Bags() {
+    public Bags(){
 
     }
 
     /**
      * Removes the pebbles
      *
-     * @param index
+ 
      */
-    public void removePebble(int index) {
+    public int removeRandomPebble() {
+        Random rand = new Random();
+        int index =rand.nextInt(this.bagPebbles.size());
         bagPebbles.remove(index);
+        return index;
     }
 
     /**
