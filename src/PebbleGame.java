@@ -286,54 +286,43 @@ public class PebbleGame {
         }
 
 
-    public synchronized void pick10() {
-        Bags bag = new Bags();
-        int newBag = randomNumGenerator(0, 3);
-        if (newBag == 1) {
-            bag = blackBagX;
-        } else if (newBag == 2) {
-            bag = blackBagY;
-        } else if (newBag == 3) {
-            bag = blackBagZ;
-        }
-        CopyOnWriteArrayList<Integer> pebbles = bag.getBagPebbles();
-        int pebblesize = pebbles.size();
-        System.out.println("Picking pebbles");
-        if (pebblesize > 10) {
-            for (int i = 0; i < 10; i++) {
-                int pick = pebbles.get(1);
-                bag.removePebble(1);
-                currentHand.add(pick);
-                System.out.println(currentHand);
-            }
-        }
-    }
-
-
-
         public synchronized void run() {
-           pick10();
-           int markerCounter = 0;
+            boolean setUp = false;
             do {
                 try {
+                    if(!setUp){
+                        Bags bag = new Bags();
+                        int newBag = randomNumGenerator(1, 3);
+                        if (newBag == 1) {
+                            bag = blackBagX;
+                        } else if (newBag == 2) {
+                            bag = blackBagY;
+                        } else if (newBag == 3) {
+                            bag = blackBagZ;
+                        }
+                        CopyOnWriteArrayList<Integer> pebbles = bag.getBagPebbles();
+                        int pebblesize = pebbles.size();
+                        if (pebblesize > 10) {
+                            for (int i = 0; i < 10; i++) {
+                                int pick = pebbles.get(1);
+                                bag.removePebble(1);
+                                currentHand.add(pick);
+                                System.out.println(currentHand);
+                            }
+                        }
+
+                        setUp = true;
+                    }
                     turn();
                 } catch (Throwable e) {
                     e.printStackTrace();
                     System.out.println("Could not execute players turns.");
                 }
-                markerCounter++;
-                System.out.println("Marker counter is " + markerCounter);
 
                 if (getHandSum() == 100 && getCurrentHand().size() == 10) {
                     playerWon(this.getPlayersName());
                     PebbleGame.setWinnerTrue();
-                    //might have to rewrite how the flag works so there is a method called outide the player class that interrups the threads 
-                    // doesnt need to interupt just needs to set all the winner to true, that will end the other threads like it did with player1 ok perfect 
-                    //can do a set winner method and call it for all players in playerWon
-                    // just have a public variable for the winner in the pebble game and then have the inner class access that winner, but i was getting errors when i tried to access the winner from the inner class, so need a getter
-                    //cool seems achievable
-                    // here it needs to say that winner is false for all instance of the player class not just this.
-                              
+
                 }
                 Thread.yield();
 
@@ -346,22 +335,17 @@ public class PebbleGame {
 
         }
 
-        public synchronized void turn() throws IOException {
+        public synchronized void turn() {
             try {
                 if (currentHand.size() == 0){
-                    System.out.println("pick up");
                     pickUp();
                 }else {
-                    System.out.println("discard");
                     discard();
                 }
-                System.out.println("check bags  A ");
                 checkBags(blackBagX, blackBagY, blackBagZ);
-                System.out.println("pick up");
                 pickUp();
-                System.out.println("check bags B");
                 checkBags(blackBagX, blackBagY, blackBagZ);
-                System.out.println(getHandSum());
+
             } catch (IOException e) {
                 System.out.println("Cannot write to file.");
             }
@@ -384,7 +368,7 @@ public class PebbleGame {
             int bag;
             Bags whiteBag = new Bags();
             if (lastPickUp == null) {
-                bag = randomNumGenerator(0, 3);
+                bag = randomNumGenerator(1, 3);
                 if (bag == 1) {
                     whiteBag = whiteBagA;
                     whiteBagLetter = "A";
@@ -410,9 +394,7 @@ public class PebbleGame {
             try{
             whiteBag.updateFile(whiteBag.getBagPebbles());
             }catch (NullPointerException e){
-                //todo can try not passing variables but instead editing the global variables
                 System.out.println("Crash");
-
             }
             updateFile(discard, currentHand, pebbleWeight, whiteBagLetter);
 
@@ -544,7 +526,7 @@ public class PebbleGame {
                 } else {
                     log += this.getPlayersName() + " has drawn a " + data + " pebble from bag " + bag ;
                 }
-                log += "\n" + this.getPlayersName() + " hand is " + list.toString().replaceAll("[\\[\\]]", "") + "\n  the current sum is" + this.getHandSum();
+                log += "\n" + this.getPlayersName() + " hand is " + list.toString().replaceAll("[\\[\\]]", "") ;
                 BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName, true));
                 System.out.println(log);
                 buffer.append(log);
