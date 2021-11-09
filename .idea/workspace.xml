@@ -5,27 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79e503ab-fc52-43af-ae30-8907adb0f758" name="Changes" comment="Final debugging and testing using the generated files">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PebbleGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PebbleGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Bags.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PebbleGame$Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PebbleGame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PebbleGame/3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/ECM2414_Report.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/~$M2414_Report.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bags.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bags.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BagsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame$Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PebbleGameTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PebbleGameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PebbleGameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhiteBagA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WhiteBagA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhiteBagB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WhiteBagB.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhiteBagC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WhiteBagC.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/player1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/player2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/player3.txt" afterDir="false" />
     </list>
     <list id="2dcd8625-54f3-4193-bcb7-b59b052dd587" name="Changes by katiehopkins" comment="Changes by katiehopkins" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +69,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.excludes" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -91,7 +82,7 @@
       <recent name="PebbleGame" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PebbleGameTest.TestReadFile">
+  <component name="RunManager" selected="JUnit.PebbleGameTest.TestCheckIntInput">
     <configuration name="PebbleGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PebbleGame" />
       <module name="PebbleGame" />
@@ -110,6 +101,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PebbleGameTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PebbleGameTest.TestCheckIntInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PebbleGame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PebbleGameTest" />
+      <option name="METHOD_NAME" value="TestCheckIntInput" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,37 +135,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src in PebbleGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PebbleGame" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="PebbleGame" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.PebbleGame" />
-      <item itemvalue="JUnit.src in PebbleGame" />
       <item itemvalue="JUnit.PebbleGameTest" />
       <item itemvalue="JUnit.PebbleGameTest.TestGetNextPebble" />
       <item itemvalue="JUnit.PebbleGameTest.TestReadFile" />
+      <item itemvalue="JUnit.PebbleGameTest.TestCheckIntInput" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PebbleGameTest.TestReadFile" />
+        <item itemvalue="JUnit.PebbleGameTest.TestCheckIntInput" />
         <item itemvalue="JUnit.PebbleGameTest" />
+        <item itemvalue="JUnit.PebbleGameTest.TestReadFile" />
         <item itemvalue="JUnit.PebbleGameTest.TestGetNextPebble" />
         <item itemvalue="Application.PebbleGame" />
-        <item itemvalue="JUnit.src in PebbleGame" />
       </list>
     </recent_temporary>
   </component>
@@ -332,6 +316,22 @@
     <MESSAGE value="Changes by katiehopkins" />
     <MESSAGE value="Final debugging and testing using the generated files" />
     <option name="LAST_COMMIT_MESSAGE" value="Final debugging and testing using the generated files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PebbleGameTest.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PebbleGameTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
